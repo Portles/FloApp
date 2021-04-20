@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Flo</string>
+
+    <string name="network_internet">Internet</string>
+    <string name="network_check_cellular">NetworkCapabilities.TRANSPORT_CELLULAR</string>
+    <string name="network_check_wifi">NetworkCapabilities.TRANSPORT_WIFI</string>
+    <string name="network_check_ethernet">NetworkCapabilities.TRANSPORT_ETHERNET</string>
+
+    <string name="internet_dialog_header">İnternet Bağlantınız Yok</string>
+    <string name="internet_dialog_message">Uygulamayı kullanmak için intenete bağlanın</string>
+    <string name="internet_dialog_positive">İNTERNETİ Aç</string>
+    <string name="internet_dialog_negative">KAPAT</string>
+</resources>
