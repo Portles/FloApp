@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/log_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_height="@dimen/log_edittext_email_height"
+        android:layout_marginStart="@dimen/log_edittexts_left_padding"
+        android:layout_marginTop="@dimen/log_edittext_email_top_padding"
+        android:layout_marginEnd="@dimen/log_edittexts_right_padding"
+        android:background="@drawable/main_edittext"
+        android:ems="10"
+        android:hint="@string/log_email_edittext_hint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_height="@dimen/log_edittext_password_height"
+        android:layout_marginStart="@dimen/log_edittexts_left_padding"
+        android:layout_marginTop="@dimen/log_edittext_password_top_padding"
+        android:layout_marginEnd="@dimen/log_edittexts_right_padding"
+        android:background="@drawable/main_edittext"
+        android:ems="10"
+        android:hint="@string/log_password_edittext_hint"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent" />
+
+    <Button
+        android:id="@+id/log_button"
+        android:layout_height="@dimen/log_button_height"
+        android:layout_marginStart="@dimen/log_button_left_padding"
+        android:layout_marginTop="@dimen/log_button_top_padding"
+        android:layout_marginEnd="@dimen/log_button_right_padding"
+        android:background="@drawable/login_button"
+        android:text="@string/log_button_placeholder"
+        android:textColor="@color/login_button_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        android:layout_width="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

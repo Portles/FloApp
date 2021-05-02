@@ -8,15 +8,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.h5190001.flo.Flo"
+        android:name=".FloApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Flo"
+        android:usesCleartextTraffic="true"
         tools:targetApi="m">
+
         <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.CategoryActivity" />
+        <activity android:name=".activities.ListActivity" />
+        <activity android:name=".activities.DetailsActivity" />
 
     </application>
 

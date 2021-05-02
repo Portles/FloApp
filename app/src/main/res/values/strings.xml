@@ -10,4 +10,29 @@
     <string name="internet_dialog_message">Uygulamayı kullanmak için intenete bağlanın</string>
     <string name="internet_dialog_positive">İNTERNETİ Aç</string>
     <string name="internet_dialog_negative">KAPAT</string>
+
+    <string name="quit_dialog_header">Çıkış</string>
+    <string name="quit_dialog_message">Uygulamadan çıkmak istediğinize emin misiniz?</string>
+    <string name="quit_dialog_positive">İptal</string>
+    <string name="quit_dialog_negative">ÇIKIŞ YAP</string>
+
+    <string name="log_email_edittext_hint">E-Posta Adresi</string>
+    <string name="log_password_edittext_hint">Şifre</string>
+    <string name="log_button_placeholder">GİRİŞ YAP</string>
+
+    <string name="list_header">Ürünler</string>
+
+    <string name="details_product">Ürün Açıklaması</string>
+    <string name="details_product_inside">İç Materyal:</string>
+    <string name="details_product_outside">Dış Materyal:</string>
+    <string name="details_product_sole">Taban:</string>
+    <string name="details_product_close_style">Kapanma Şekli:</string>
+
+    <string name="details_product_info">Ürün Özellikleri</string>
+    <string name="details_product_brand">Marka</string>
+    <string name="details_product_gender">Cinsiyet</string>
+    <string name="details_product_sku">SKU</string>
+    <string name="details_product_modal">Model</string>
+    <string name="details_product_color">Renk</string>
+    <string name="details_product_saya">Saya Malzeme</string>
 </resources>

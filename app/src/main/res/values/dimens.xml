@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="log_button_angle">45</dimen>
+    <dimen name="log_button_corner_radius">4dp</dimen>
+
+    <dimen name="log_edittexts_left_padding">10dp</dimen>
+    <dimen name="log_edittexts_right_padding">10dp</dimen>
+
+    <dimen name="log_button_left_padding">10dp</dimen>
+    <dimen name="log_button_right_padding">10dp</dimen>
+
+    <dimen name="log_edittext_email_top_padding">64dp</dimen>
+    <dimen name="log_edittext_email_width">295dp</dimen>
+    <dimen name="log_edittext_email_height">53dp</dimen>
+
+    <dimen name="log_edittext_password_top_padding">20dp</dimen>
+    <dimen name="log_edittext_password_width">295dp</dimen>
+    <dimen name="log_edittext_password_height">53dp</dimen>
+
+    <dimen name="log_button_top_padding">100dp</dimen>
+    <dimen name="log_button_width">295dp</dimen>
+    <dimen name="log_button_height">53dp</dimen>
+
+</resources>

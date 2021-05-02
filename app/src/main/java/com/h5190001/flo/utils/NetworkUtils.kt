@@ -9,7 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.h5190001.flo.R
 
-class NetworkUtils: AppCompatActivity() {
+object NetworkUtils: AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     fun isOnline(context: Context): Boolean {

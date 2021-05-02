@@ -26,20 +26,15 @@ class SplashActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun checkNetwork() {
-        val internet = NetworkUtils()
-
-        val isOnline = internet.isOnline(applicationContext)
-
+            val isOnline = NetworkUtils.isOnline(applicationContext)
         if (isOnline) {
-            StartDelay()
+            startDelay()
         } else {
-            val alerts = AlertboxUtil()
-
-            alerts.InternetAlertDialog(applicationContext, this@SplashActivity)
+            AlertboxUtil.InternetAlertDialog(applicationContext, this@SplashActivity)
         }
     }
 
-    private fun StartDelay() {
+    private fun startDelay() {
         val timerThread: Thread = object : Thread() {
             override fun run() {
                 try {
@@ -47,7 +42,7 @@ class SplashActivity : AppCompatActivity() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 } finally {
-                    val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                    val intent = Intent(this@SplashActivity, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
