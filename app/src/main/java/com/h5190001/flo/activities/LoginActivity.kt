@@ -30,19 +30,32 @@ class LoginActivity : AppCompatActivity() {
     private fun setLoginButtonListener() {
         binding.apply {
             logButton.setOnClickListener() {
-                val email = binding.editTextTextEmailAddress.text
-                val password = binding.editTextTextPassword.text
-
-                val intent = Intent(this@LoginActivity,CategoryActivity::class.java)
-                startActivity(intent)
-                finish()
+                logUser()
             }
         }
     }
 
+    private fun logUser() {
+        val email: String = binding.editTextTextEmailAddress.text.toString()
+        val password: String = binding.editTextTextPassword.text.toString()
+
+        val valitadion: Boolean = validate(email ,password)
+
+        if (valitadion) {
+            val intent = Intent(this@LoginActivity,CategoryActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+
+        }
+    }
+
+    private fun validate(email: String, password: String): Boolean {
+
+        return true
+    }
+
     private fun setBinds() {
-
-
         binding.editTextTextEmailAddress
     }
 }

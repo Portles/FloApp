@@ -9,18 +9,17 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/log_edittext_email_height"
         android:layout_marginStart="@dimen/log_edittexts_left_padding"
         android:layout_marginTop="@dimen/log_edittext_email_top_padding"
         android:layout_marginEnd="@dimen/log_edittexts_right_padding"
         android:background="@drawable/main_edittext"
-        android:ems="10"
         android:hint="@string/log_email_edittext_hint"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPassword"

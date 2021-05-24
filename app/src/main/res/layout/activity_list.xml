@@ -7,13 +7,34 @@
     tools:context=".activities.ListActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/productsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="@dimen/list_products_margintop"
         android:text="@string/list_header"
+        android:textSize="@dimen/list_products_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="411dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productsTextView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRecyclerview"
+        android:layout_width="405dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

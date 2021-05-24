@@ -20,6 +20,8 @@
     <string name="log_password_edittext_hint">Şifre</string>
     <string name="log_button_placeholder">GİRİŞ YAP</string>
 
+    <string name="category_welcome">Hoşgeldiniz</string>
+
     <string name="list_header">Ürünler</string>
 
     <string name="details_product">Ürün Açıklaması</string>

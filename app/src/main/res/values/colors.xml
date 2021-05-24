@@ -10,6 +10,8 @@
 
     <color name="login_edittext_border">#656464</color>
 
+    <color name="list_cardview_backgrund">#FFFFFF</color>
+
     <color name="login_button">#FF671D</color>
     <color name="login_button_placeholder">#FFFFFF</color>
 

@@ -21,4 +21,17 @@
     <dimen name="log_button_width">295dp</dimen>
     <dimen name="log_button_height">53dp</dimen>
 
+    <dimen name="category_imgview_width">100dp</dimen>
+    <dimen name="category_imgview_height">100dp</dimen>
+    <dimen name="category_imgview_marginstart">44dp</dimen>
+    <dimen name="category_imgview_margintop">44dp</dimen>
+
+    <dimen name="category_welcome_marginstart">60dp</dimen>
+    <dimen name="category_welcome_marginend">60dp</dimen>
+
+    <dimen name="category_searchview_margin_top">60dp</dimen>
+    
+    <dimen name="list_products_margintop">56dp</dimen>
+    <dimen name="list_products_size">36sp</dimen>
+
 </resources>

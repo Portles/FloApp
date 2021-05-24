@@ -20,7 +20,6 @@ class SplashActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     private fun init() {
         checkNetwork()
-
     }
 
 

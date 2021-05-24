@@ -7,42 +7,42 @@
     tools:context=".activities.CategoryActivity">
 
     <ImageView
-        android:id="@+id/profile_imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="44dp"
+        android:id="@+id/profileImageView"
+        android:layout_width="@dimen/category_imgview_width"
+        android:layout_height="@dimen/category_imgview_height"
+        android:layout_marginStart="@dimen/category_imgview_marginstart"
+        android:layout_marginTop="@dimen/category_imgview_margintop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="96dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/profile_imageView"
+        android:layout_marginStart="@dimen/category_welcome_marginstart"
+        android:layout_marginTop="@dimen/category_welcome_marginend"
+        android:text="@string/category_welcome"
+        app:layout_constraintStart_toEndOf="@+id/profileImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
         android:id="@+id/categorySearchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="@dimen/category_searchview_margin_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_imageView">
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView">
 
     </SearchView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/category_recyclerView"
-        android:layout_width="0dp"
+        android:id="@+id/categoryRecyclerview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/categorySearchView" />
+        app:layout_constraintTop_toBottomOf="@+id/categorySearchView"
+        tools:listitem="@layout/category_card_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>
