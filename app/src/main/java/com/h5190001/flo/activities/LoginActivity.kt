@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.h5190001.flo.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
-
+    //LOGO KOY //TODO
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
