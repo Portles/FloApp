@@ -1,0 +1,752 @@
+[
+  {
+    "categoryName": "SNEAKER",
+    "category_pic_loc": "100785439.jpg",
+        "items": [
+        {
+            "name": "KHAN 1FX Gri Erkek Sneaker Ayakkabı",
+            "pic_loc": "100785439.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Dokuma",
+              "sole": "Termo"
+            },
+            "specs": {
+                "brand": "Lumberjack",
+                "gender": "Erkek",
+                "sku": "100785439",
+                "modal": "KHAN 1FX",
+                "color": "Gri",
+                "saya": "Tekstil"
+            }
+        },
+        {
+            "name": "WEARALLDAY Siyah Erkek Sneaker Ayakkabı",
+            "pic_loc": "100662886.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Dokuma",
+              "sole": "Phylon"
+            },
+            "specs": {
+                "brand": "Nike",
+                "gender": "Erkek",
+                "sku": "100662886",
+                "modal": "WEARALLDAY",
+                "color": "Siyah",
+                "saya": "Tekstil"
+            }
+        },
+        {
+            "name": "CARTER MESH M 1FX Siyah Erkek Sneaker Ayakkabı",
+            "pic_loc": "100782443.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Dokuma",
+              "sole": "Poliüretan"
+            },
+            "specs": {
+                "brand": "Kinetix",
+                "gender": "Erkek",
+                "sku": "100782443",
+                "modal": "CARTER MESH M 1FX",
+                "color": "Siyah",
+                "saya": "Tekstil"
+            }
+        },
+        {
+            "name": "SERGY M 1FX Siyah Erkek Sneaker Ayakkabı",
+            "pic_loc": "100662441.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Phylon"
+            },
+            "specs": {
+                "brand": "Kinetix",
+                "gender": "Erkek",
+                "sku": "100662441",
+                "modal": "SERGY M 1FX",
+                "color": "Siyah",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "KARLU PU M 1FX Beyaz Erkek Sneaker Ayakkabı",
+            "pic_loc": "100785407.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Termo"
+            },
+            "specs": {
+                "brand": "Kinetix",
+                "gender": "Erkek",
+                "sku": "100785407",
+                "modal": "KARL PU M 1FX",
+                "color": "Beyaz",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "FINSTER 1FX Beyaz Erkek Sneaker Ayakkabı",
+            "pic_loc": "100784937.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Phylon"
+            },
+            "specs": {
+                "brand": "Lumberjack",
+                "gender": "Erkek",
+                "sku": "100784937",
+                "modal": "FINSTER 1FX",
+                "color": "Beyaz",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "Unisex Spor Sneaker Ayakkabı 772-0",
+            "pic_loc": "200079337.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Tonny Black",
+                "gender": "Unisex",
+                "sku": "200079337",
+                "modal": "772-0",
+                "color": "Zebra",
+                "saya": "Suni Deri"
+            }
+        }
+    ]
+  },
+  {
+    "categoryName": "SPOR AYAKKABILAR",
+    "category_pic_loc": "101028876.jpg",
+    "items": [
+        {
+            "name": "APOLLO 1FX Siyah Erkek Sneaker Ayakkabı",
+            "pic_loc": "101028876.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Dokuma",
+              "sole": "Poliüretan"
+            },
+            "specs": {
+                "brand": "Torex",
+                "gender": "Erkek",
+                "sku": "101028876",
+                "modal": "APOLLO 1FX",
+                "color": "Siyah",
+                "saya": "Tekstil"
+            }
+        },
+        {
+            "name": "TAGEN M Siyah Erkek Sneaker Ayakkabı",
+            "pic_loc": "100496444.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Dokuma",
+              "sole": "Termo"
+            },
+            "specs": {
+                "brand": "Kinetix",
+                "gender": "Erkek",
+                "sku": "100496444",
+                "modal": "DARBY",
+                "color": "Siyah",
+                "saya": "Tekstil"
+            }
+        },
+        {
+            "name": "MILERO 1FX Gri Erkek Koşu Ayakkabısı",
+            "pic_loc": "100603296.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Dokuma",
+              "sole": "Phylon"
+            },
+            "specs": {
+                "brand": "Kinetix",
+                "gender": "Erkek",
+                "sku": "100603296",
+                "modal": "MILERO 1FX",
+                "color": "Gri",
+                "saya": "Tekstil"
+            }
+        },
+        {
+            "name": "MITON PU 1FX Siyah Erkek Koşu Ayakkabısı",
+            "pic_loc": "100785847.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Phylon"
+            },
+            "specs": {
+                "brand": "Kinetix",
+                "gender": "Erkek",
+                "sku": "100785847",
+                "modal": "MITON PU 1FX",
+                "color": "Siyah",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "MACON 1FX Lacivert Erkek Comfort Ayakkabı",
+            "pic_loc": "100785691.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Dokuma",
+              "sole": "Phylon"
+            },
+            "specs": {
+                "brand": "Kinetix",
+                "gender": "Erkek",
+                "sku": "100785691",
+                "modal": "MACON 1FX",
+                "color": "Lacivert",
+                "saya": "Tekstil"
+            }
+        },
+        {
+            "name": "KARL MESH M 1FX Siyah Erkek Sneaker Ayakkabı",
+            "pic_loc": "38278601.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Puma",
+                "gender": "Erkek",
+                "sku": "38278601",
+                "modal": "UP TDP",
+                "color": "Siyah",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "Unisex Spor Sneaker Ayakkabı 772-0",
+            "pic_loc": "101016603.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Tonny Black",
+                "gender": "Unisex",
+                "sku": "101016603",
+                "modal": "772-0",
+                "color": "Zebra",
+                "saya": "Tekstil"
+            }
+        }
+    ]
+  },
+  {
+    "categoryName": "GÜNLÜK AYAKKABI",
+    "category_pic_loc": "100935897.jpg",
+    "items": [
+        {
+            "name": "102486.M1FX Vizon Erkek Klasik Ayakkabı",
+            "pic_loc": "100935897.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Polaris 5 Nokta",
+                "gender": "Erkek",
+                "sku": "100935897",
+                "modal": "102486.M1FX",
+                "color": "Vizon",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "102484.M1FX Vizon Erkek Klasik Ayakkabı",
+            "pic_loc": "100935878.jpg",
+            "details": {
+              "insideMaterial": "Suni Deri",
+              "outsideMaterial": "Hakiki Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Polaris 5 Nokta",
+                "gender": "Erkek",
+                "sku": "100935878",
+                "modal": "102484.M1FX",
+                "color": "Vizon",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "102331.M1FX Siyah Erkek Comfort Ayakkabı",
+            "pic_loc": "100932064.jpg",
+            "details": {
+              "insideMaterial": "Suni Deri",
+              "outsideMaterial": "Hakiki Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Polaris 5 Nokta",
+                "gender": "Erkek",
+                "sku": "100932064",
+                "modal": "102331.M1FX",
+                "color": "Siyah",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "226535 1FX Lacivert Erkek Marin Ayakkabı",
+            "pic_loc": "100916411.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Tekstil",
+              "sole": "Termo"
+            },
+            "specs": {
+                "brand": "Dockers by Gerli",
+                "gender": "Erkek",
+                "sku": "100916411",
+                "modal": "226535 1FX",
+                "color": "Lacivert",
+                "saya": "Tekstil"
+            }
+        },
+        {
+            "name": "102384.M1FX Vizon Erkek Comfort Ayakkabı",
+            "pic_loc": "100932294.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Polaris 5 Nokta",
+                "gender": "Erkek",
+                "sku": "100932294",
+                "modal": "102384.M1FX",
+                "color": "Vizon",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "AL-22 1FX Siyah Erkek Comfort Ayakkabı",
+            "pic_loc": "100916301.jpg",
+            "details": {
+              "insideMaterial": "Deri",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Flexall",
+                "gender": "Erkek",
+                "sku": "100916301",
+                "modal": "AL-22 1FX",
+                "color": "Siyah",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "160400.M1FX Siyah Erkek Klasik Ayakkabı",
+            "pic_loc": "100932522.jpg",
+            "details": {
+              "insideMaterial": "Tekstil / Suni Deri",
+              "outsideMaterial": "Hakiki Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Polaris",
+                "gender": "Erkek",
+                "sku": "100932522",
+                "modal": "160400.M1FX",
+                "color": "Siyah",
+                "saya": "Deri"
+            }
+        }
+    ]
+  },
+  {
+    "categoryName": "KLASİK",
+    "category_pic_loc": "100564256.jpg",
+    "items": [
+        {
+            "name": "MOORE Siyah Erkek Ayakkabı",
+            "pic_loc": "100564256.jpg",
+            "details": {
+              "insideMaterial": "Suni Deri",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Mercedes",
+                "gender": "Erkek",
+                "sku": "100564256",
+                "modal": "MOORE",
+                "color": "Siyah",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "SPECTER Siyah Erkek Klasik Ayakkabı",
+            "pic_loc": "100563855.jpg",
+            "details": {
+              "insideMaterial": "Hakiki Deri / Tekstil",
+              "outsideMaterial": "Hakiki Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Mercedes",
+                "gender": "Erkek",
+                "sku": "100563855",
+                "modal": "SPECTER",
+                "color": "Siyah",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "STARK Siyah Erkek Ayakkabı",
+            "pic_loc": "100564377.jpg",
+            "details": {
+              "insideMaterial": "Suni Deri",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Mercedes",
+                "gender": "Erkek",
+                "sku": "100564377",
+                "modal": "STARK",
+                "color": "Siyah",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "51066 C 19 Siyah Erkek Klasik Ayakkabı",
+            "pic_loc": "100441883.jpg",
+            "details": {
+              "insideMaterial": "Suni Deri",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "JJ-Stiller",
+                "gender": "Erkek",
+                "sku": "100441883",
+                "modal": "51066 C 19",
+                "color": "Siyah",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "4231-1 Siyah Erkek Klasik Ayakkabı",
+            "pic_loc": "100518056.jpg",
+            "details": {
+              "insideMaterial": "Suni Deri",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Garamond",
+                "gender": "Erkek",
+                "sku": "100518056",
+                "modal": "4231-1",
+                "color": "Siyah",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "356501.M Siyah Erkek Klasik Ayakkabı",
+            "pic_loc": "100501014.jpg",
+            "details": {
+              "insideMaterial": "Suni Deri",
+              "outsideMaterial": "Suni Deri (Süet)",
+              "sole": "Termo"
+            },
+            "specs": {
+                "brand": "Polaris",
+                "gender": "Erkek",
+                "sku": "100501014",
+                "modal": "356501.M",
+                "color": "Siyah",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "CROWN Taupe Erkek Klasik Ayakkabı",
+            "pic_loc": "100381391.jpg",
+            "details": {
+              "insideMaterial": "Hakiki Deri / Tekstil",
+              "outsideMaterial": "Suni Deri (Nubuk) ",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Mercedes",
+                "gender": "Erkek",
+                "sku": "100381391",
+                "modal": "CROWN",
+                "color": "Taupe",
+                "saya": "Deri"
+            }
+        }
+    ]
+  },
+  {
+    "categoryName": "BOT",
+    "category_pic_loc": "100550167.jpg",
+    "items": [
+        {
+            "name": "VORTE Kahverengi Erkek Bot",
+            "pic_loc": "100550167.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "U.S. Polo Assn.",
+                "gender": "Erkek",
+                "sku": "100550167",
+                "modal": "VORTE",
+                "color": "Kahverengi",
+                "saya": "PU/TEKSTIL"
+            }
+        },
+        {
+            "name": "TORONTO Kahverengi Erkek Postal",
+            "pic_loc": "100578964.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Lumberjack",
+                "gender": "Erkek",
+                "sku": "100578964",
+                "modal": "TORONTO",
+                "color": "Kahverengi",
+                "saya": "DERI/TEKSTIL"
+            }
+        },
+        {
+            "name": "RIVER NUB 9PR Siyah Erkek Bot",
+            "pic_loc": "100420588.jpg",
+            "details": {
+              "insideMaterial": "Tekstil / Suni Deri",
+              "outsideMaterial": "Hakiki Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Lumberjack",
+                "gender": "Erkek",
+                "sku": "100420588",
+                "modal": "RIVER NUB 9PR",
+                "color": "Siyah",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "BY-01-3 Siyah Erkek Klasik Bot",
+            "pic_loc": "100441905.jpg",
+            "details": {
+              "insideMaterial": "Hakiki Deri",
+              "outsideMaterial": "Hakiki Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Garamond",
+                "gender": "Erkek",
+                "sku": "100441905",
+                "modal": "BY-01-3",
+                "color": "Siyah",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "POTTER Haki Erkek Bot",
+            "pic_loc": "100540426.jpg",
+            "details": {
+              "insideMaterial": "Suni Deri",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Kinetix",
+                "gender": "Erkek",
+                "sku": "100540426",
+                "modal": "POTTER",
+                "color": "Haki",
+                "saya": "Suni Deri"
+            }
+        },
+        {
+            "name": "229087 Kahverengi Erkek Bot",
+            "pic_loc": "100549741.jpg",
+            "details": {
+              "insideMaterial": "Tekstil",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Dockers by Gerli",
+                "gender": "Erkek",
+                "sku": "100549741",
+                "modal": "229087",
+                "color": "Kahverengi",
+                "saya": "Deri"
+            }
+        },
+        {
+            "name": "Unisex Trekkıng Bot Tb1719",
+            "pic_loc": "200079410.jpg",
+            "details": {
+              "insideMaterial": "Hakiki Deri",
+              "outsideMaterial": "Suni Deri",
+              "sole": "Kauçuk"
+            },
+            "specs": {
+                "brand": "Tonny Black",
+                "gender": "Unisex",
+                "sku": "200079410",
+                "modal": "TB1719-2",
+                "color": "Siyah füme",
+                "saya": "Suni Deri"
+            }
+        }
+    ]
+  },
+  {
+    "categoryName": "SANDALET",
+    "category_pic_loc": "101016605.jpg",
+    "items": [
+    {
+        "name": "216504 1FX Gri Erkek Sandalet",
+        "pic_loc": "101016605.jpg",
+        "details": {
+          "insideMaterial": "Tekstil",
+          "outsideMaterial": "Suni Deri",
+          "sole": "Kauçuk"
+        },
+        "specs": {
+            "brand": "Dockers by Gerli",
+            "gender": "Erkek",
+            "sku": "101016605",
+            "modal": "216504 1FX",
+            "color": "Gri",
+            "saya": "Suni Deri"
+        }
+    },
+    {
+        "name": "400625.M1FX Siyah Erkek Sandalet",
+        "pic_loc": "101022106.jpg",
+        "details": {
+          "insideMaterial": "Suni Deri",
+          "outsideMaterial": "Suni Deri",
+          "sole": "Poliüretan"
+        },
+        "specs": {
+            "brand": "Polaris",
+            "gender": "Erkek",
+            "sku": "101022106",
+            "modal": "400625.M1FX",
+            "color": "Siyah",
+            "saya": "Suni Deri"
+        }
+    },
+    {
+        "name": "228653 Kahverengi Erkek Sandalet",
+        "pic_loc": "100497779.jpg",
+        "details": {
+          "insideMaterial": "Tekstil",
+          "outsideMaterial": "Suni Deri",
+          "sole": "Phylon"
+        },
+        "specs": {
+            "brand": "Dockers by Gerli",
+            "gender": "Erkek",
+            "sku": "100497779",
+            "modal": "228653",
+            "color": "Kahverengi",
+            "saya": "Suni Deri"
+        }
+    },
+    {
+        "name": "400677.M1FX Siyah Erkek Sandalet",
+        "pic_loc": "101022217.jpg",
+        "details": {
+          "insideMaterial": "Suni Deri",
+          "outsideMaterial": "Suni Deri",
+          "sole": "Kauçuk"
+        },
+        "specs": {
+            "brand": "Polaris",
+            "gender": "Erkek",
+            "sku": "101022217",
+            "modal": "400677.M1FX",
+            "color": "Siyah",
+            "saya": "Suni Deri"
+        }
+    },
+    {
+        "name": "103 C Siyah Erkek Sandalet",
+        "pic_loc": "100349543.jpg",
+        "details": {
+          "insideMaterial": "Suni Deri",
+          "outsideMaterial": "Suni Deri",
+          "sole": "Poliüretan"
+        },
+        "specs": {
+            "brand": "Flexall",
+            "gender": "Erkek",
+            "sku": "100349543",
+            "modal": "103 C",
+            "color": "Siyah",
+            "saya": "Suni Deri"
+        }
+    },
+    {
+        "name": "160240.M Siyah Erkek Sandalet",
+        "pic_loc": "100500958.jpg",
+        "details": {
+          "insideMaterial": "Suni Deri",
+          "outsideMaterial": "Suni Deri",
+          "sole": "Poliüretan"
+        },
+        "specs": {
+            "brand": "Polaris",
+            "gender": "Erkek",
+            "sku": "100500958",
+            "modal": "160240.M",
+            "color": "Siyah",
+            "saya": "Suni Deri"
+        }
+    },
+    {
+        "name": "HABEK 1FX Siyah Erkek Sandalet",
+        "pic_loc": "101017715.jpg",
+        "details": {
+          "insideMaterial": "Suni Deri",
+          "outsideMaterial": "Suni Deri",
+          "sole": "Poliüretan"
+        },
+        "specs": {
+            "brand": "Kinetix",
+            "gender": "Erkek",
+            "sku": "101017715",
+            "modal": "HABEK 1FX",
+            "color": "Siyah",
+            "saya": "Suni Deri"
+        }
+    }
+    ]
+  }
+]

@@ -53,7 +53,7 @@
         tools:layout_editor_absoluteY="578dp" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/BrandText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/details_product_brand"

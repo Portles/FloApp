@@ -1,30 +1,31 @@
-package com.h5190001.flo.user
+package com.h5190001.flo.category
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.h5190001.flo.data.repository.UserRepository
-import com.h5190001.flo.models.UserResponse
+import com.h5190001.flo.data.locale.CategoryDataSource
+import com.h5190001.flo.data.repository.CategoryRepository
+import com.h5190001.flo.models.CategoryResponse
 import com.h5190001.flo.utils.ResourceStatus
 import kotlinx.coroutines.launch
 
-class UserViewModel : ViewModel() {
+class CategoryViewModel : ViewModel() {
 
-    private  val userRepository: UserRepository =UserRepository()
+    private  val categotyRepository: CategoryRepository = CategoryRepository()
 
     init {
-        getAllUsers()
+        getAllCategorys()
     }
 
-    var allUsersLiveData = MutableLiveData<UserResponse>()
-    var error =    MutableLiveData<Throwable>()
+    var allCategorysLiveData = MutableLiveData<CategoryResponse>()
+    var error =     MutableLiveData<Throwable>()
     var loading =    MutableLiveData<Boolean>()
 
-    fun getAllUsers()  = viewModelScope.launch {
+    fun getAllCategorys()  = viewModelScope.launch {
 
-        userRepository.getAllUsers()
+        categotyRepository.getAllCategorys()
 
             .asLiveData(viewModelScope.coroutineContext).observeForever {
 
@@ -34,7 +35,7 @@ class UserViewModel : ViewModel() {
                     }
 
                     ResourceStatus.SUCCESS -> {
-                        allUsersLiveData?.postValue(it.data)
+                        allCategorysLiveData?.postValue(it.data!!)
                         loading?.postValue(false)
                     }
 
