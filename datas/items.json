@@ -2,7 +2,7 @@
   {
     "categoryName": "SNEAKER",
     "category_pic_loc": "100785439.jpg",
-        "items": [
+        "Items": [
         {
             "name": "KHAN 1FX Gri Erkek Sneaker Ayakkabı",
             "pic_loc": "100785439.jpg",
@@ -127,7 +127,7 @@
   {
     "categoryName": "SPOR AYAKKABILAR",
     "category_pic_loc": "101028876.jpg",
-    "items": [
+    "Items": [
         {
             "name": "APOLLO 1FX Siyah Erkek Sneaker Ayakkabı",
             "pic_loc": "101028876.jpg",
@@ -252,7 +252,7 @@
   {
     "categoryName": "GÜNLÜK AYAKKABI",
     "category_pic_loc": "100935897.jpg",
-    "items": [
+    "Items": [
         {
             "name": "102486.M1FX Vizon Erkek Klasik Ayakkabı",
             "pic_loc": "100935897.jpg",
@@ -377,7 +377,7 @@
   {
     "categoryName": "KLASİK",
     "category_pic_loc": "100564256.jpg",
-    "items": [
+    "Items": [
         {
             "name": "MOORE Siyah Erkek Ayakkabı",
             "pic_loc": "100564256.jpg",
@@ -502,7 +502,7 @@
   {
     "categoryName": "BOT",
     "category_pic_loc": "100550167.jpg",
-    "items": [
+    "Items": [
         {
             "name": "VORTE Kahverengi Erkek Bot",
             "pic_loc": "100550167.jpg",
@@ -627,7 +627,7 @@
   {
     "categoryName": "SANDALET",
     "category_pic_loc": "101016605.jpg",
-    "items": [
+    "Items": [
     {
         "name": "216504 1FX Gri Erkek Sandalet",
         "pic_loc": "101016605.jpg",

@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.h5190001.flo.data.locale.CategoryDataSource
 import com.h5190001.flo.data.repository.CategoryRepository
 import com.h5190001.flo.models.CategoryResponse
 import com.h5190001.flo.utils.ResourceStatus
@@ -19,9 +18,9 @@ class CategoryViewModel : ViewModel() {
         getAllCategorys()
     }
 
-    var allCategorysLiveData = MutableLiveData<CategoryResponse>()
-    var error =     MutableLiveData<Throwable>()
-    var loading =    MutableLiveData<Boolean>()
+    var categorysLiveData : MutableLiveData<CategoryResponse>? = null
+    var error :     MutableLiveData<Throwable>? = null
+    var loading :    MutableLiveData<Boolean>? = null
 
     fun getAllCategorys()  = viewModelScope.launch {
 
@@ -35,7 +34,7 @@ class CategoryViewModel : ViewModel() {
                     }
 
                     ResourceStatus.SUCCESS -> {
-                        allCategorysLiveData?.postValue(it.data!!)
+                        categorysLiveData?.postValue(it.data!!)
                         loading?.postValue(false)
                     }
 

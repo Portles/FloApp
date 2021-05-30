@@ -11,7 +11,7 @@ import retrofit2.http.GET
 
 interface CategoryService {
 
-    @GET("items")
+    @GET("/Portles/FloApp/master/datas/items.json")
     suspend fun getAllCategorys(): Response<CategoryResponse>
 
     companion object  {

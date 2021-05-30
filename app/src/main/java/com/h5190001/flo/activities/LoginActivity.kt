@@ -44,17 +44,17 @@ class LoginActivity : AppCompatActivity() {
         val email: String = binding.editTextTextEmailAddress.text.toString()
         val password: String = binding.editTextTextPassword.text.toString()
 
-        userViewModel= UserViewModel()
+        //userViewModel= UserViewModel()
 
-        val valitadion: Boolean = validate(email ,password)
+        //val valitadion: Boolean = validate(email ,password)
 
-        if (valitadion) {
+        //if (valitadion) {
             val intent = Intent(this@LoginActivity,CategoryActivity::class.java)
             startActivity(intent)
             finish()
-        } else {
+        //} else {
 
-        }
+        //}
     }
 
     private fun validate(email: String, password: String): Boolean {
@@ -64,8 +64,7 @@ class LoginActivity : AppCompatActivity() {
 
                 it.run {
 
-                    this.get(0).email
-                    this.get(0).password
+
                 }
             })
 

@@ -7,7 +7,7 @@ import com.h5190001.flo.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class RemoteCategoryDataSource  : CategoryDataSource {
+class RemoteCategoryDataSource : CategoryDataSource {
 
     override  fun getAllCategorys(): Flow<Resource<CategoryResponse>> = flow {
         try {

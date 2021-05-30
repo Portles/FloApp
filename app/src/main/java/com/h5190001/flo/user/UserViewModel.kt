@@ -18,9 +18,9 @@ class UserViewModel : ViewModel() {
         getAllUsers()
     }
 
-    var allUsersLiveData = MutableLiveData<UserResponse>()
-    var error =    MutableLiveData<Throwable>()
-    var loading =    MutableLiveData<Boolean>()
+    var allUsersLiveData : MutableLiveData<UserResponse>? = null
+    var error :    MutableLiveData<Throwable>? = null
+    var loading :    MutableLiveData<Boolean>? = null
 
     fun getAllUsers()  = viewModelScope.launch {
 
@@ -34,7 +34,7 @@ class UserViewModel : ViewModel() {
                     }
 
                     ResourceStatus.SUCCESS -> {
-                        allUsersLiveData?.postValue(it.data)
+                        allUsersLiveData?.postValue(it.data!!)
                         loading?.postValue(false)
                     }
 
