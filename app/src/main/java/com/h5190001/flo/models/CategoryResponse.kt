@@ -1,6 +1,5 @@
 package com.h5190001.flo.models
 
-import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
 class CategoryResponse : ArrayList<CategoryResponseItem>()

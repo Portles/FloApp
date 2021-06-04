@@ -16,6 +16,9 @@ import com.h5190001.flo.utils.ToastUtil
 import java.util.*
 import kotlin.collections.ArrayList
 import androidx.lifecycle.Observer
+import com.h5190001.flo.models.CategoryResponse
+import com.h5190001.flo.utils.ObjectUtil.CategoryToJsonString
+import com.h5190001.flo.utils.ObjectUtil.jsonStringToCategory
 
 class CategoryActivity : AppCompatActivity() {
 
@@ -23,7 +26,6 @@ class CategoryActivity : AppCompatActivity() {
     private lateinit var categoryAdapter: CategoryRecyclerViewAdapter
 
     var list: ArrayList<String>? = null
-    var categoryList= arrayListOf("Kadın", "Erkek")
 
     var categoryViewModel: CategoryViewModel?=null
 
@@ -36,7 +38,7 @@ class CategoryActivity : AppCompatActivity() {
     private fun init() {
         setBinds()
         setRecyclerViewData()
-        listenSearchBar()
+        //listenSearchBar()
     }
 
     private fun setBinds() {
@@ -53,8 +55,8 @@ class CategoryActivity : AppCompatActivity() {
 
             categorysLiveData?.observe(this@CategoryActivity, Observer {
                 it.run {
-                    //this.get(0).address.city
                     Log.e("Nxioterya","observe: "+it.toString())
+                    setCategoryRecyclerView(this)
                 }
             })
 
@@ -70,11 +72,13 @@ class CategoryActivity : AppCompatActivity() {
                 //Handle loading
             })
         }
+    }
 
+    private fun setCategoryRecyclerView(cat: CategoryResponse) {
         binding.apply {
-            categoryAdapter = CategoryRecyclerViewAdapter(categoryList,object : ItemClickListener {
+            categoryAdapter = CategoryRecyclerViewAdapter(cat,object : ItemClickListener {
                 override fun onDelete(position: Int) {
-                    categoryList.removeAt(position)
+                    cat.removeAt(position)
                     categoryAdapter.notifyDataSetChanged()
                 }
                 override fun onItemClick(position: Int) {

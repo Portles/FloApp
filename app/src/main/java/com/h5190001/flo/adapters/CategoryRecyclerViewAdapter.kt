@@ -5,9 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.h5190001.flo.databinding.CategoryCardViewBinding
 import com.h5190001.flo.interfaces.ItemClickListener
+import com.h5190001.flo.models.CategoryResponse
+import java.util.*
 
 class CategoryRecyclerViewAdapter (
-    var categorys: ArrayList<String>,
+    var categorys: CategoryResponse,
     var onItemClickListener: ItemClickListener ) :RecyclerView.Adapter<CategoryRecyclerViewAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: CategoryCardViewBinding) :
@@ -26,7 +28,8 @@ class CategoryRecyclerViewAdapter (
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
             binding.apply {
-                binding.categoryText.text = categorys[position]
+                binding.categoryText.text = categorys[position].categoryName
+                //binding.categoryImage EKLENCEK //TODO
                 CategoryCardview.setOnClickListener {
                     onItemClickListener.onItemClick(position)
                 }

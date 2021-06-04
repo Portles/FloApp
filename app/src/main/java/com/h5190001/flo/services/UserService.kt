@@ -11,7 +11,7 @@ import retrofit2.http.GET
 
 interface UserService {
     //https://jsonplaceholder.typicode.com/users
-    @GET("/Portles/FloApp/master/datas/users.json")
+    @GET("/Portles/FloApp/main/datas/users.json")
     suspend fun getAllUsers(): Response<UserResponse>
 
     //https://jsonplaceholder.typicode.com/posts

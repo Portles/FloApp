@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.h5190001.flo.data.repository.UserRepository
+import com.h5190001.flo.models.CategoryResponse
 import com.h5190001.flo.models.UserResponse
 import com.h5190001.flo.utils.ResourceStatus
 import kotlinx.coroutines.launch
@@ -18,9 +19,9 @@ class UserViewModel : ViewModel() {
         getAllUsers()
     }
 
-    var allUsersLiveData : MutableLiveData<UserResponse>? = null
-    var error :    MutableLiveData<Throwable>? = null
-    var loading :    MutableLiveData<Boolean>? = null
+    var allUsersLiveData = MutableLiveData<UserResponse>()
+    var error =    MutableLiveData<Throwable>()
+    var loading : MutableLiveData<Boolean>? = MutableLiveData()
 
     fun getAllUsers()  = viewModelScope.launch {
 
@@ -34,13 +35,13 @@ class UserViewModel : ViewModel() {
                     }
 
                     ResourceStatus.SUCCESS -> {
-                        allUsersLiveData?.postValue(it.data!!)
+                        allUsersLiveData.postValue(it.data!!)
                         loading?.postValue(false)
                     }
 
                     ResourceStatus.ERROR -> {
                         Log.e("ERROR", "${it.throwable}")
-                        error?.postValue(it.throwable!!)
+                        error.postValue(it.throwable!!)
                         loading?.postValue(false)
                     }
                 }

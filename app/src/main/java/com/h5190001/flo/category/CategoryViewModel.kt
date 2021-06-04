@@ -18,9 +18,9 @@ class CategoryViewModel : ViewModel() {
         getAllCategorys()
     }
 
-    var categorysLiveData : MutableLiveData<CategoryResponse>? = null
-    var error :     MutableLiveData<Throwable>? = null
-    var loading :    MutableLiveData<Boolean>? = null
+    var categorysLiveData = MutableLiveData<CategoryResponse>()
+    var error =    MutableLiveData<Throwable>()
+    var loading : MutableLiveData<Boolean>? = MutableLiveData()
 
     fun getAllCategorys()  = viewModelScope.launch {
 
@@ -34,13 +34,13 @@ class CategoryViewModel : ViewModel() {
                     }
 
                     ResourceStatus.SUCCESS -> {
-                        categorysLiveData?.postValue(it.data!!)
+                        categorysLiveData.postValue(it.data!!)
                         loading?.postValue(false)
                     }
 
                     ResourceStatus.ERROR -> {
                         Log.e("ERROR", "${it.throwable}")
-                        error?.postValue(it.throwable!!)
+                        error.postValue(it.throwable!!)
                         loading?.postValue(false)
                     }
                 }
