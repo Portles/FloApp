@@ -17,8 +17,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 import androidx.lifecycle.Observer
 import com.h5190001.flo.models.CategoryResponse
-import com.h5190001.flo.utils.ObjectUtil.CategoryToJsonString
-import com.h5190001.flo.utils.ObjectUtil.jsonStringToCategory
 
 class CategoryActivity : AppCompatActivity() {
 
@@ -63,7 +61,7 @@ class CategoryActivity : AppCompatActivity() {
             error?.observe(this@CategoryActivity, Observer {
                 it.run {
                     Toast.makeText(applicationContext, this.localizedMessage, Toast.LENGTH_LONG).show()
-                    Log.e("Nxioterya","Error verdik aga")
+                    Log.e("Nxioterya","Error verdik")
                 }
             })
 

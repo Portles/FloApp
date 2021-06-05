@@ -28,10 +28,10 @@
 
     <SearchView
         android:id="@+id/categorySearchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="279dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/category_searchview_margin_top"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImageView">
 
@@ -40,9 +40,22 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/categorySearchView"
         tools:listitem="@layout/category_card_view" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="104dp"
+        android:layout_height="40dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toEndOf="@+id/categorySearchView"
+        app:layout_constraintTop_toTopOf="@+id/categorySearchView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

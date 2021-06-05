@@ -4,13 +4,13 @@ import com.google.gson.Gson
 import com.h5190001.flo.models.CategoryResponse
 
 object ObjectUtil {
-    fun CategoryToJsonString(cat: CategoryResponse): String? {
+    fun <T> objectToString(objectData: T): String {
         val gson = Gson()
-        return gson.toJson(cat)
+        return gson.toJson(objectData)
     }
 
-    fun jsonStringToCategory(jsonString: String?): CategoryResponse? {
+    inline fun <reified T> jsonStringToObject(jsonString: String): T {
         val gson = Gson()
-        return gson.fromJson(jsonString, CategoryResponse::class.java)
+        return gson.fromJson(jsonString, T::class.java)
     }
 }
