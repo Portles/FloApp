@@ -37,12 +37,8 @@ class CategoryRecyclerViewAdapter (
                 binding.categoryText.text = categorys[position].categoryName
                 val url: String = Constants.CATEGORY_IMG_URL + categorys[position].category_pic_loc
                 binding.categoryImage.getImageFromUrl(url)
-                //binding.categoryImage EKLENCEK //TODO
                 CategoryCardview.setOnClickListener {
                     onItemClickListener.onItemClick(position)
-                }
-                CategoryCardview.setOnClickListener {
-                    onItemClickListener.onDelete(position)
                 }
             }
         }
@@ -51,4 +47,5 @@ class CategoryRecyclerViewAdapter (
     fun ImageView.getImageFromUrl(url: String){
         Glide.with(this.context).load(url).into(this)
     }
+    //TODO UTILE CEVİR
 }

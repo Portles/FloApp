@@ -12,9 +12,11 @@ import com.h5190001.flo.databinding.ActivityCategoryBinding
 import com.h5190001.flo.databinding.ActivityListBinding
 import com.h5190001.flo.databinding.ActivityLoginBinding
 import com.h5190001.flo.interfaces.ItemClickListener
+import com.h5190001.flo.models.Item
 import com.h5190001.flo.utils.AlertboxUtil
 import com.h5190001.flo.utils.AlertdialogUtil
 import com.h5190001.flo.utils.MESSAGE_TYPE
+import com.h5190001.flo.utils.ObjectUtil.jsonStringToObject
 import com.h5190001.flo.utils.ToastUtil
 import java.util.*
 
@@ -34,7 +36,8 @@ class ListActivity : AppCompatActivity() {
 
     private fun init() {
         setBindings()
-        setRecyclerViewData()
+        val items: ArrayList<Item> = jsonStringToObject(intent.getStringExtra("list")!!)
+        setRecyclerViewData(items)
     }
 
     private fun setBindings() {
@@ -48,14 +51,9 @@ class ListActivity : AppCompatActivity() {
         AlertdialogUtil.BuildSortAlert(applicationContext)
     }
 
-    private fun setRecyclerViewData() {
+    private fun setRecyclerViewData(Items: ArrayList<Item>) {
         binding.apply {
-            listAdapter = ListRecyclerViewAdapter(listArray, object : ItemClickListener {
-                override fun onDelete(position: Int) {
-                    listArray.removeAt(position)
-                    listAdapter.notifyDataSetChanged()
-                }
-
+            listAdapter = ListRecyclerViewAdapter(Items, object : ItemClickListener {
                 override fun onItemClick(position: Int) {
                     //Toast.makeText(applicationContext,categoryList.get(position),Toast.LENGTH_SHORT).show()
                 }
