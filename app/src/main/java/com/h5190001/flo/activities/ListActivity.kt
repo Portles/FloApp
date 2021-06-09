@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.h5190001.flo.adapters.ListRecyclerViewAdapter
 import com.h5190001.flo.databinding.ActivityListBinding
 import com.h5190001.flo.interfaces.ItemClickListener
+import com.h5190001.flo.models.CategoryResponse
 import com.h5190001.flo.models.Item
 import com.h5190001.flo.utils.*
 import com.h5190001.flo.utils.AlertdialogUtil.BuildSortAlert
@@ -15,6 +16,7 @@ import com.h5190001.flo.utils.ObjectUtil.jsonStringToObje
 import com.h5190001.flo.utils.ProgressDialogUtil.DissmisDialog
 import com.h5190001.flo.utils.ProgressDialogUtil.ShowDialog
 import java.util.*
+import kotlin.collections.ArrayList
 
 class ListActivity : AppCompatActivity() {
 
@@ -23,7 +25,7 @@ class ListActivity : AppCompatActivity() {
 
     var rcyclerviewState = 0
 
-    var list: ArrayList<String>? = null
+    companion object { var list: List<Item>? = null }
     var listArray= arrayListOf("Ayakkabı 1", "Ayakkabı 2") //TODO SEARCH KISMI
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,8 +37,8 @@ class ListActivity : AppCompatActivity() {
     private fun init() {
         setBindings()
         ShowDialog(this@ListActivity)
-        val items: List<Item> = jsonStringToObje(intent.getStringExtra("list")!!)
-        setRecyclerViewData(items)
+        list = jsonStringToObje(intent.getStringExtra("list")!!)
+        setRecyclerViewData()
         listenSortButton()
     }
 
@@ -46,24 +48,28 @@ class ListActivity : AppCompatActivity() {
     }
 
     private fun AlertDialogAction() {
-        BuildSortAlert(this@ListActivity)
+        BuildSortAlert(this@ListActivity, list!! as ArrayList<Item>)
+        binding.apply {
+            listAdapter.notifyDataSetChanged()
+        }
     }
 
-    private fun setRecyclerViewData(Items: List<Item>) {
+    private fun setRecyclerViewData() {
         binding.apply {
-            listAdapter = ListRecyclerViewAdapter(Items, object : ItemClickListener {
-                override fun onItemClick(position: Int) {
-                    //Toast.makeText(applicationContext,categoryList.get(position),Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@ListActivity,DetailsActivity::class.java)
-                    val data: String = ObjectUtil.objectToString(Items[position])
-                    intent.putExtra("object",data) //TODO TIRNAKLARI DUZELT
-                    startActivity(intent)
-                }
-            })
-            binding.listRecyclerview.adapter = listAdapter
-            listRecyclerview.layoutManager = GridLayoutManager(applicationContext,2)
-            DissmisDialog()
-            listenChangeRecyclerViewButton()
+            list.let {
+                listAdapter = ListRecyclerViewAdapter(it!!, object : ItemClickListener {
+                    override fun onItemClick(position: Int) {
+                        val intent = Intent(this@ListActivity,DetailsActivity::class.java)
+                        val data: String = ObjectUtil.objectToString(it.get(position))
+                        intent.putExtra("object",data) //TODO TIRNAKLARI DUZELT
+                        startActivity(intent)
+                    }
+                })
+                binding.listRecyclerview.adapter = listAdapter
+                listRecyclerview.layoutManager = GridLayoutManager(applicationContext,2)
+                DissmisDialog()
+                listenChangeRecyclerViewButton()
+            }
         }
     }
 
