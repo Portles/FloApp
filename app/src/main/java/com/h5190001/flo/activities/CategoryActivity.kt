@@ -6,23 +6,18 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.SearchView
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.h5190001.flo.adapters.CategoryRecyclerViewAdapter
 import com.h5190001.flo.category.CategoryViewModel
 import com.h5190001.flo.databinding.ActivityCategoryBinding
 import com.h5190001.flo.interfaces.ItemClickListener
 import com.h5190001.flo.utils.AlertboxUtil
-import com.h5190001.flo.utils.MESSAGE_TYPE
-import com.h5190001.flo.utils.ToastUtil
 import java.util.*
-import kotlin.collections.ArrayList
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import com.h5190001.flo.models.CategoryResponse
-import com.h5190001.flo.utils.ObjectUtil.ObjeToJsonString
-import com.h5190001.flo.utils.ObjectUtil.jsonStringToObje
-import com.h5190001.flo.utils.ObjectUtil.jsonStringToObject
 import com.h5190001.flo.utils.ObjectUtil.objectToString
+import com.h5190001.flo.utils.ProgressDialogUtil.DissmisDialog
+import com.h5190001.flo.utils.ProgressDialogUtil.ShowDialog
 
 class CategoryActivity : AppCompatActivity() {
 
@@ -30,7 +25,7 @@ class CategoryActivity : AppCompatActivity() {
     private lateinit var categoryAdapter: CategoryRecyclerViewAdapter
 
     var categoryViewModel: CategoryViewModel?=null
-    private var list = listOf<String>() //TODO BİLMİYORUM
+    private var category = CategoryResponse() //TODO BİLMİYORUM
 
     //TODO PROGRESSDIALOG EKLENECEK
 
@@ -42,14 +37,13 @@ class CategoryActivity : AppCompatActivity() {
 
     private fun init() {
         setBinds()
+        ShowDialog(this@CategoryActivity)
         setRecyclerViewData()
     }
 
     private fun setBinds() {
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.categorySearchView
-        binding.categoryRecyclerview
     }
 
     private fun setRecyclerViewData() {
@@ -61,8 +55,9 @@ class CategoryActivity : AppCompatActivity() {
                 it.run {
                     Log.e("Nxioterya","observe: "+it.toString())
                     setCategoryRecyclerView(this)
-                    list = listCategoryNames(this)
-                    listenSearchBar()
+                    DissmisDialog()
+                    category = it
+                    SearchButton()
                 }
             })
 
@@ -85,11 +80,10 @@ class CategoryActivity : AppCompatActivity() {
             categoryAdapter = CategoryRecyclerViewAdapter(cat,object : ItemClickListener {
                 override fun onItemClick(position: Int) {
                     Toast.makeText(applicationContext,cat[position].categoryName,Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@CategoryActivity,ListActivity::class.java)
+                    val intent = Intent(this@CategoryActivity, ListActivity::class.java)
                     val data: String = objectToString(cat[position].Items)
                     intent.putExtra("list",data) //TODO TIRNAKLARI DUZELT
                     startActivity(intent)
-                    finish()
                 }
             })
             binding.categoryRecyclerview.adapter = categoryAdapter
@@ -97,34 +91,49 @@ class CategoryActivity : AppCompatActivity() {
         }
     }
 
-    private fun listCategoryNames(cat: CategoryResponse): List<String> {
-        var catNameList= listOf<String>()
-        for (catName in cat) {
+    private fun ArraylistToList(cat: CategoryResponse): List<CategoryResponse> {
+        val arrList = listOf(cat)
+        return arrList
+    }
 
+    private fun SearchButton() {
+        binding.apply {
+            searchButton.setOnClickListener {
+                listenSearchBar()
+            }
         }
-        return catNameList
+    }
+
+    private fun filter(search: String?) {
+        search?.let {
+            category.let {
+                val filterCategoryList = it.filter { it.categoryName!!.contains(search) }
+                setCategoryRecyclerView(filterCategoryList as CategoryResponse)
+            }
+        }
     }
 
     private fun listenSearchBar() {
         binding.apply {
-            categorySearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-                override fun onQueryTextSubmit(query: String?): Boolean {
-                    if(list.contains(query.toString().toLowerCase(Locale("TR-tr")))){ //BAŞINA ARAMA STRİNG ARRAY EKLE //TODO
-                        //categoryAdapter.filter(query);
-                    }else{
-                        ToastUtil.BuildToast(applicationContext, query!!.toString() ,MESSAGE_TYPE.SHORT_MESSAGE) //DİKKAT ÇÖKERTEBİLİR
+            category.let {
+                val data: List<CategoryResponse> = ArraylistToList(category)
+                categorySearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                    override fun onQueryTextSubmit(query: String?): Boolean {
+                        if(data.contains(query.toString().toLowerCase(Locale("TR-tr")))){ //BAŞINA ARAMA STRİNG ARRAY EKLE //TODO
+                            filter(query);
+                        }
+                        return false
                     }
-                    return false
-                }
-                override fun onQueryTextChange(newText: String?): Boolean {
-                    return false
-                }
-            })
+                    override fun onQueryTextChange(newText: String?): Boolean {
+                        return false
+                    }
+                })
+            }
+
         }
     }
 
     override fun onBackPressed() {
-        super.onBackPressed()
         AlertboxUtil.QuitAlertDialog(applicationContext, this@CategoryActivity)
     }
 }

@@ -10,32 +10,43 @@
         android:id="@+id/productsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/list_products_margintop"
+        android:layout_marginTop="@dimen/list_products_mar_top"
         android:text="@string/list_header"
         android:textSize="@dimen/list_products_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="411dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="32dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRecyclerview"
+        android:layout_width="@dimen/list_rcrler_width"
+        android:layout_height="@dimen/list_rcrler_height"
+        android:layout_marginTop="@dimen/list_rcrler_mar_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortButton"
+        tools:listitem="@layout/list_card_view" />
+
+    <Button
+        android:id="@+id/sortButton"
+        android:layout_width="@dimen/list_sortbutton_width"
+        android:layout_height="@dimen/list_sortbutton_height"
+        android:layout_marginStart="@dimen/list_sortbutton_mar_start"
+        android:layout_marginTop="@dimen/list_sortbutton_mar_top"
+        android:background="@drawable/login_button"
+        android:text="@string/list_list_type"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productsTextView" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listRecyclerview"
-        android:layout_width="0dp"
-        android:layout_height="350dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+    <Button
+        android:id="@+id/changeRecyclerviewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Değitir"
+        app:layout_constraintStart_toEndOf="@+id/sortButton"
+        app:layout_constraintTop_toTopOf="@+id/sortButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,17 @@
     <dimen name="log_button_width">295dp</dimen>
     <dimen name="log_button_height">53dp</dimen>
 
+
+    <dimen name="category_searchview_width">225dp</dimen>
+    <dimen name="category_searchview_height">44dp</dimen>
+    <dimen name="category_searchview_marginstart">44dp</dimen>
+
+    <dimen name="category_rcrycler_height">455dp</dimen>
+    <dimen name="category_rcrycler_margin_top">30dp</dimen>
+
+    <dimen name="category_search_button_width">104dp</dimen>
+    <dimen name="category_search_button_height">40dp</dimen>
+
     <dimen name="category_imgview_width">100dp</dimen>
     <dimen name="category_imgview_height">100dp</dimen>
     <dimen name="category_imgview_marginstart">44dp</dimen>
@@ -33,5 +44,34 @@
     
     <dimen name="list_products_margintop">56dp</dimen>
     <dimen name="list_products_size">36sp</dimen>
+    <dimen name="list_products_mar_top">40dp</dimen>
+    <dimen name="list_rcrler_width">412dp</dimen>
+    <dimen name="list_rcrler_height">529dp</dimen>
+    <dimen name="list_rcrler_mar_top">40dp</dimen>
+
+    <dimen name="list_switch_mar_start">52dp</dimen>
+    <dimen name="list_switch_mar_top">8dp</dimen>
+
+    <dimen name="list_sortbutton_width">214dp</dimen>
+    <dimen name="list_sortbutton_height">44dp</dimen>
+    <dimen name="list_sortbutton_mar_start">16dp</dimen>
+    <dimen name="list_sortbutton_mar_top">32dp</dimen>
+
+
+    <dimen name="details_img_size">250dp</dimen>
+    <dimen name="details_img_top_mar">36dp</dimen>
+    <dimen name="details_product_detail_mar_top">316dp</dimen>
+    <dimen name="details_product_spec_mar_top">172dp</dimen>
+    <dimen name="details_spec_element_mar_top">40dp</dimen>
+    <dimen name="details_brand_mar_top">20dp</dimen>
+    <dimen name="details_modal_mar_start">148dp</dimen>
+    <dimen name="details_material_mar_top">24dp</dimen>
+
+    <dimen name="details_brandtext_mar_top">4dp</dimen>
+
+    <dimen name="details_modalText_width">74dp</dimen>
+    <dimen name="details_modalText_height">20dp</dimen>
+
+    <dimen name="details_soletext_mar_start">80dp</dimen>
 
 </resources>

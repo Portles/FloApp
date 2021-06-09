@@ -6,114 +6,194 @@
     android:layout_height="match_parent"
     tools:context=".activities.DetailsActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <TextView
+        android:id="@+id/colorText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:text="@string/error"
+        app:layout_constraintStart_toStartOf="@+id/color"
+        app:layout_constraintTop_toBottomOf="@+id/color" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/details_img_size"
+        android:layout_height="@dimen/details_img_size"
+        android:layout_marginTop="@dimen/details_img_top_mar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/productDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="@dimen/details_product_detail_mar_top"
         android:text="@string/details_product"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/productSpecs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_product_spec_mar_top"
         android:text="@string/details_product_info"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="488dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productDetail" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_spec_element_mar_top"
         android:text="@string/details_product_gender"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="575dp" />
+        app:layout_constraintStart_toStartOf="@+id/brand"
+        app:layout_constraintTop_toBottomOf="@+id/brand" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_spec_element_mar_top"
         android:text="@string/details_product_color"
-        tools:layout_editor_absoluteX="245dp"
-        tools:layout_editor_absoluteY="578dp" />
+        app:layout_constraintStart_toStartOf="@+id/modal"
+        app:layout_constraintTop_toBottomOf="@+id/modal" />
 
     <TextView
-        android:id="@+id/BrandText"
+        android:id="@+id/brand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_brand_mar_top"
         android:text="@string/details_product_brand"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="530dp" />
+        app:layout_constraintStart_toStartOf="@+id/productSpecs"
+        app:layout_constraintTop_toBottomOf="@+id/productSpecs" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/modal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/details_modal_mar_start"
         android:text="@string/details_product_modal"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="530dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/brand"
+        app:layout_constraintStart_toEndOf="@+id/brand" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/saya"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_spec_element_mar_top"
         android:text="@string/details_product_saya"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="618dp" />
+        app:layout_constraintStart_toStartOf="@+id/color"
+        app:layout_constraintTop_toBottomOf="@+id/color" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/sku"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_spec_element_mar_top"
         android:text="@string/details_product_sku"
-        tools:layout_editor_absoluteX="56dp"
-        tools:layout_editor_absoluteY="618dp" />
+        app:layout_constraintStart_toStartOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/insideMaterial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_material_mar_top"
         android:text="@string/details_product_inside"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="327dp" />
+        app:layout_constraintStart_toStartOf="@+id/productDetail"
+        app:layout_constraintTop_toBottomOf="@+id/productDetail" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/outsideMaterial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_material_mar_top"
         android:text="@string/details_product_outside"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="360dp" />
+        app:layout_constraintStart_toStartOf="@+id/insideMaterial"
+        app:layout_constraintTop_toBottomOf="@+id/insideMaterial" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/sole"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_material_mar_top"
         android:text="@string/details_product_sole"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="389dp" />
+        app:layout_constraintStart_toStartOf="@+id/outsideMaterial"
+        app:layout_constraintTop_toBottomOf="@+id/outsideMaterial" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/brandText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/details_product_close_style"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="419dp" />
+        android:layout_marginTop="@dimen/details_brandtext_mar_top"
+        android:text="@string/error"
+        app:layout_constraintStart_toStartOf="@+id/brand"
+        app:layout_constraintTop_toBottomOf="@+id/brand" />
+
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error"
+        app:layout_constraintStart_toStartOf="@+id/gender"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+    <TextView
+        android:id="@+id/skuText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error"
+        app:layout_constraintStart_toStartOf="@+id/sku"
+        app:layout_constraintTop_toBottomOf="@+id/sku" />
+
+    <TextView
+        android:id="@+id/modalText"
+        android:layout_width="@dimen/details_modalText_width"
+        android:layout_height="@dimen/details_modalText_height"
+        android:text="@string/error"
+        app:layout_constraintStart_toStartOf="@+id/modal"
+        app:layout_constraintTop_toBottomOf="@+id/modal" />
+
+    <TextView
+        android:id="@+id/sayaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error"
+        app:layout_constraintStart_toStartOf="@+id/saya"
+        app:layout_constraintTop_toBottomOf="@+id/saya" />
+
+    <TextView
+        android:id="@+id/insideMaterialText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/details_spec_element_mar_top"
+        android:text="@string/error"
+        app:layout_constraintStart_toEndOf="@+id/insideMaterial"
+        app:layout_constraintTop_toTopOf="@+id/insideMaterial" />
+
+    <TextView
+        android:id="@+id/outsideMaterialText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/details_spec_element_mar_top"
+        android:text="@string/error"
+        app:layout_constraintStart_toEndOf="@+id/outsideMaterial"
+        app:layout_constraintTop_toTopOf="@+id/outsideMaterial" />
+
+    <TextView
+        android:id="@+id/soleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/details_soletext_mar_start"
+        android:text="@string/error"
+        app:layout_constraintStart_toEndOf="@+id/sole"
+        app:layout_constraintTop_toTopOf="@+id/sole" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

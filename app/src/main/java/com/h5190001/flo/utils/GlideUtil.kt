@@ -13,4 +13,7 @@ object GlideUtil {
             .centerCrop()
             .into(img)
     }
+    fun ImageView.getImageFromUrl(url: String){
+        Glide.with(this.context).load(url).into(this)
+    }
 }

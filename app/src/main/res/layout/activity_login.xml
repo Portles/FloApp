@@ -12,12 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/log_edittext_email_height"
         android:layout_marginStart="@dimen/log_edittexts_left_padding"
-        android:layout_marginTop="@dimen/log_edittext_email_top_padding"
+        android:layout_marginTop="248dp"
         android:layout_marginEnd="@dimen/log_edittexts_right_padding"
         android:background="@drawable/main_edittext"
         android:hint="@string/log_email_edittext_hint"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,5 +50,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         android:layout_width="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,11 +21,13 @@ object ObjectUtil {
         return gson.toJson(liste)
     }
 
-
-
-
-    fun jsonStringToObje(jsonString: String?): List<Item>? {
+    fun jsonStringToObje(jsonString: String?): List<Item> {
         val gson = Gson()
         return gson.fromJson(jsonString , Array<Item>::class.java).toList()
+    }
+
+    fun jsonStringToItemObje(jsonString: String?): Item {
+        val gson = Gson()
+        return gson.fromJson(jsonString , Item::class.java)
     }
 }

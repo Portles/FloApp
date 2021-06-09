@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Flo</string>
 
+    <string name="error">ERROR</string>
+
     <string name="network_internet">Internet</string>
     <string name="network_check_cellular">NetworkCapabilities.TRANSPORT_CELLULAR</string>
     <string name="network_check_wifi">NetworkCapabilities.TRANSPORT_WIFI</string>
@@ -23,6 +25,9 @@
     <string name="category_welcome">Hoşgeldiniz</string>
 
     <string name="list_header">Ürünler</string>
+    <string name="list_list_type">Sırala</string>
+
+    <string name="category_searchview">Ara</string>
 
     <string name="details_product">Ürün Açıklaması</string>
     <string name="details_product_inside">İç Materyal:</string>
