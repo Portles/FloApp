@@ -18,18 +18,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.CategoryActivity"
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.categories.CategoryActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".activities.ListActivity" />
-        <activity android:name=".activities.DetailsActivity" />
+        <activity android:name=".ui.list.ListActivity" />
+        <activity android:name=".ui.details.DetailsActivity" />
 
     </application>
 

@@ -1,14 +1,13 @@
-package com.h5190001.flo.activities
+package com.h5190001.flo.ui.list
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.h5190001.flo.adapters.ListRecyclerViewAdapter
+import com.h5190001.flo.R
+import com.h5190001.flo.ui.details.DetailsActivity
 import com.h5190001.flo.databinding.ActivityListBinding
 import com.h5190001.flo.interfaces.ItemClickListener
-import com.h5190001.flo.models.CategoryResponse
 import com.h5190001.flo.models.Item
 import com.h5190001.flo.utils.*
 import com.h5190001.flo.utils.AlertdialogUtil.BuildSortAlert
@@ -27,7 +26,6 @@ class ListActivity : AppCompatActivity() {
     companion object { var list: List<Item>? = null
         lateinit var listAdapter: ListRecyclerViewAdapter
     }
-    var listArray= arrayListOf("Ayakkabı 1", "Ayakkabı 2") //TODO SEARCH KISMI
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +36,7 @@ class ListActivity : AppCompatActivity() {
     private fun init() {
         setBindings()
         ShowDialog(this@ListActivity)
-        list = jsonStringToObje(intent.getStringExtra("list")!!)
+        list = jsonStringToObje(intent.getStringExtra(applicationContext.getResources().getString(R.string.list))!!)
         setRecyclerViewData()
         listenSortButton()
     }
@@ -57,9 +55,9 @@ class ListActivity : AppCompatActivity() {
             list.let {
                 listAdapter = ListRecyclerViewAdapter(it!!, object : ItemClickListener {
                     override fun onItemClick(position: Int) {
-                        val intent = Intent(this@ListActivity,DetailsActivity::class.java)
+                        val intent = Intent(this@ListActivity, DetailsActivity::class.java)
                         val data: String = ObjectUtil.objectToString(it.get(position))
-                        intent.putExtra("object",data) //TODO TIRNAKLARI DUZELT
+                        intent.putExtra(applicationContext.getResources().getString(R.string.data),data)
                         startActivity(intent)
                     }
                 })
@@ -80,7 +78,7 @@ class ListActivity : AppCompatActivity() {
             }
         }
     }
-
+                                                                                                        // TODO BURAYI ADAM ET
     private fun listenChangeRecyclerViewButton() {
         binding.apply {
             changeRecyclerviewButton.setOnClickListener {

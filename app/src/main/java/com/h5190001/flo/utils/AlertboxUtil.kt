@@ -50,4 +50,17 @@ object AlertboxUtil {
         builder.show()
     }
 
+    fun CustomAlertDialog(activity: Activity, title: String, message: String, neg: String) {
+        val builder = AlertDialog.Builder(activity)
+
+        builder.setTitle(title)
+        builder.setMessage(message)
+        builder.setPositiveButton(
+            neg
+        ) { intf: DialogInterface, i: Int ->
+            intf.dismiss()
+        }
+        builder.show()
+    }
+
 }

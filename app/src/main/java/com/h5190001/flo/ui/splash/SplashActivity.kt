@@ -1,4 +1,4 @@
-package com.h5190001.flo.activities
+package com.h5190001.flo.ui.splash
 
 import android.content.Intent
 import android.os.Build
@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.h5190001.flo.R
+import com.h5190001.flo.ui.login.LoginActivity
 import com.h5190001.flo.utils.AlertboxUtil
 import com.h5190001.flo.utils.NetworkUtils
 

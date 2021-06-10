@@ -1,4 +1,4 @@
-package com.h5190001.flo.activities
+package com.h5190001.flo.ui.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,12 +6,13 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
 import com.h5190001.flo.R
+import com.h5190001.flo.ui.categories.CategoryActivity
 import com.h5190001.flo.databinding.ActivityLoginBinding
 import com.h5190001.flo.models.UserResponse
-import com.h5190001.flo.user.UserViewModel
+import com.h5190001.flo.UserViewModel
+import com.h5190001.flo.utils.AlertboxUtil.CustomAlertDialog
 
 class LoginActivity : AppCompatActivity() {
-    //LOGO KOY //TODO
     private lateinit var binding: ActivityLoginBinding
 
     var userViewModel: UserViewModel?=null
@@ -20,19 +21,21 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
         init()
     }
 
     private fun init() {
-        setBinds()
+        setBindings()
         getUsers()
-        setButtonAction()
+        initButtonAction()
     }
 
-    private fun setButtonAction() {
+    private fun setBindings() {
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
+
+    private fun initButtonAction() {
         setLoginButtonListener()
     }
 
@@ -48,14 +51,14 @@ class LoginActivity : AppCompatActivity() {
         val email: String = binding.editTextTextEmailAddress.text.toString()
         val password: String = binding.editTextTextPassword.text.toString()
 
-        val intent = Intent(this@LoginActivity,CategoryActivity::class.java)
+        val intent = Intent(this@LoginActivity, CategoryActivity::class.java)
         startActivity(intent) // TODO BURAYI SİL
         finish()
 
         val valitadion: Boolean = validate(email ,password)
 
         if (valitadion) {
-            val intent = Intent(this@LoginActivity,CategoryActivity::class.java)
+            val intent = Intent(this@LoginActivity, CategoryActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -64,7 +67,10 @@ class LoginActivity : AppCompatActivity() {
     private fun validate(email: String, password: String): Boolean {
         users.let {
             for (user in users!!) {
-                if(user.email == email && user.password == password) {
+                if(user.email == email && user.password != password) {
+                    CustomAlertDialog(this@LoginActivity,getString(R.string.wrong_pass_title),getString(R.string.wrong_pass_message), getString(R.string.wrong_pass_neg_button))
+                    return false
+                } else if(user.email == email && user.password == password) {
                     return true
                 }
             }
@@ -92,9 +98,5 @@ class LoginActivity : AppCompatActivity() {
                 //Handle loading
             })
         }
-    }
-
-    private fun setBinds() {
-        binding.editTextTextEmailAddress
     }
 }

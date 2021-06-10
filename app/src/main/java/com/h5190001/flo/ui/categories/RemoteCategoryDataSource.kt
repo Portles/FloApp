@@ -1,20 +1,20 @@
-package com.h5190001.flo.data.datasource.remote
+package com.h5190001.flo.ui.categories
 
-import com.h5190001.flo.data.locale.UserDataSource
-import com.h5190001.flo.models.UserResponse
-import com.h5190001.flo.services.UserService
+import com.h5190001.flo.data.locale.CategoryDataSource
+import com.h5190001.flo.models.CategoryResponse
+import com.h5190001.flo.services.CategoryService
 import com.h5190001.flo.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class RemoteUserDataSource  : UserDataSource {
+class RemoteCategoryDataSource : CategoryDataSource {
 
-    override  fun getAllUsers(): Flow<Resource<UserResponse>> = flow {
+    override  fun getAllCategorys(): Flow<Resource<CategoryResponse>> = flow {
         try {
 
             emit(Resource.Loading())
 
-            val response = UserService.build().getAllUsers()
+            val response = CategoryService.build().getAllCategorys()
 
             if (response.isSuccessful) {
 
@@ -28,5 +28,4 @@ class RemoteUserDataSource  : UserDataSource {
             e.printStackTrace()
         }
     }
-
 }

@@ -2,8 +2,8 @@ package com.h5190001.flo.utils
 
 import android.app.Activity
 import android.app.AlertDialog
-import com.h5190001.flo.activities.ListActivity.Companion.list
-import com.h5190001.flo.activities.ListActivity.Companion.listAdapter
+import com.h5190001.flo.ui.list.ListActivity.Companion.list
+import com.h5190001.flo.ui.list.ListActivity.Companion.listAdapter
 import com.h5190001.flo.models.Item
 
 object AlertdialogUtil {

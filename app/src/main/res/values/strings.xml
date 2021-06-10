@@ -4,6 +4,9 @@
     <string name="error">ERROR</string>
 
     <string name="login_debug">MVVM_TEST</string>
+    <string name="list">list</string>
+    <string name="language">TR-tr</string>
+    <string name="data">data</string>
 
     <string name="network_internet">Internet</string>
     <string name="network_check_cellular">NetworkCapabilities.TRANSPORT_CELLULAR</string>
@@ -48,4 +51,7 @@
     <string name="list_button_change">DEĞİŞTİR</string>
 
     <string name="loading">Yükleniyor…</string>
+    <string name="wrong_pass_title">Şifre hatalı!</string>
+    <string name="wrong_pass_message">Email ve şifre uyuşmuyor!</string>
+    <string name="wrong_pass_neg_button">TAMAM</string>
 </resources>

@@ -1,10 +1,8 @@
-package com.h5190001.flo.adapters
+package com.h5190001.flo.ui.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.h5190001.flo.data.datasource.resources.Constants
 import com.h5190001.flo.databinding.ListCardViewBinding
 import com.h5190001.flo.interfaces.ItemClickListener

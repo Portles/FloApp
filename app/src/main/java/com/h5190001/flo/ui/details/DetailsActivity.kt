@@ -1,12 +1,12 @@
-package com.h5190001.flo.activities
+package com.h5190001.flo.ui.details
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import com.bumptech.glide.Glide
+import com.h5190001.flo.R
 import com.h5190001.flo.data.datasource.resources.Constants
 import com.h5190001.flo.databinding.ActivityDetailsBinding
 import com.h5190001.flo.models.Item
+import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
 import com.h5190001.flo.utils.ObjectUtil
 
 class DetailsActivity : AppCompatActivity() {
@@ -21,7 +21,8 @@ class DetailsActivity : AppCompatActivity() {
 
     private fun init() {
         setBindings()
-        val item: Item = ObjectUtil.jsonStringToItemObje(intent.getStringExtra("object")!!)
+        val item: Item = ObjectUtil.jsonStringToItemObje(intent.getStringExtra(applicationContext.getResources().getString(
+            R.string.data))!!)
         initData(item)
     }
 
@@ -48,9 +49,4 @@ class DetailsActivity : AppCompatActivity() {
             imageView.getImageFromUrl(url)
         }
     }
-
-    fun ImageView.getImageFromUrl(url: String){
-        Glide.with(this.context).load(url).into(this)
-    }
-    //TODO UTILE CEVİR
 }

@@ -1,18 +1,17 @@
-package com.h5190001.flo.adapters
+package com.h5190001.flo.ui.categories
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.h5190001.flo.data.datasource.resources.Constants
 import com.h5190001.flo.databinding.CategoryCardViewBinding
 import com.h5190001.flo.interfaces.ItemClickListener
 import com.h5190001.flo.models.CategoryResponse
+import com.h5190001.flo.models.CategoryResponseItem
 import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
 
 class CategoryRecyclerViewAdapter (
-    var categorys: CategoryResponse,
+    var categorys: List<CategoryResponseItem>,
     var onItemClickListener: ItemClickListener ) :RecyclerView.Adapter<CategoryRecyclerViewAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: CategoryCardViewBinding) :
@@ -26,6 +25,10 @@ class CategoryRecyclerViewAdapter (
 
     override fun getItemCount(): Int {
         return categorys.size
+    }
+
+    fun setData(newCategorys: List<CategoryResponseItem>) {
+        categorys = newCategorys
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
