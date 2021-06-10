@@ -1,4 +1,4 @@
-package com.h5190001.flo
+package com.h5190001.flo.ui.login
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
@@ -6,8 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.h5190001.flo.data.repository.UserRepository
-import com.h5190001.flo.models.CategoryResponse
-import com.h5190001.flo.models.UserResponse
+import com.h5190001.flo.data.models.UserResponse
 import com.h5190001.flo.utils.ResourceStatus
 import kotlinx.coroutines.launch
 

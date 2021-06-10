@@ -3,9 +3,9 @@ package com.h5190001.flo.ui.details
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.h5190001.flo.R
-import com.h5190001.flo.data.datasource.resources.Constants
+import com.h5190001.flo.utils.Constants
 import com.h5190001.flo.databinding.ActivityDetailsBinding
-import com.h5190001.flo.models.Item
+import com.h5190001.flo.data.models.Item
 import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
 import com.h5190001.flo.utils.ObjectUtil
 

@@ -3,16 +3,16 @@ package com.h5190001.flo.ui.categories
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.h5190001.flo.data.datasource.resources.Constants
+import com.h5190001.flo.utils.Constants
 import com.h5190001.flo.databinding.CategoryCardViewBinding
-import com.h5190001.flo.interfaces.ItemClickListener
-import com.h5190001.flo.models.CategoryResponse
-import com.h5190001.flo.models.CategoryResponseItem
+import com.h5190001.flo.utils.ItemClickListener
+import com.h5190001.flo.data.models.CategoryResponseItem
 import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
 
 class CategoryRecyclerViewAdapter (
     var categorys: List<CategoryResponseItem>,
-    var onItemClickListener: ItemClickListener ) :RecyclerView.Adapter<CategoryRecyclerViewAdapter.ViewHolder>() {
+    var onItemClickListener: ItemClickListener
+) :RecyclerView.Adapter<CategoryRecyclerViewAdapter.ViewHolder>() {
 
     inner class ViewHolder(val binding: CategoryCardViewBinding) :
         RecyclerView.ViewHolder(binding.root)

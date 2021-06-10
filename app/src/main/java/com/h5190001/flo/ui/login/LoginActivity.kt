@@ -8,8 +8,7 @@ import androidx.lifecycle.Observer
 import com.h5190001.flo.R
 import com.h5190001.flo.ui.categories.CategoryActivity
 import com.h5190001.flo.databinding.ActivityLoginBinding
-import com.h5190001.flo.models.UserResponse
-import com.h5190001.flo.UserViewModel
+import com.h5190001.flo.data.models.UserResponse
 import com.h5190001.flo.utils.AlertboxUtil.CustomAlertDialog
 
 class LoginActivity : AppCompatActivity() {
@@ -50,10 +49,6 @@ class LoginActivity : AppCompatActivity() {
     private fun logUser() {
         val email: String = binding.editTextTextEmailAddress.text.toString()
         val password: String = binding.editTextTextPassword.text.toString()
-
-        val intent = Intent(this@LoginActivity, CategoryActivity::class.java)
-        startActivity(intent) // TODO BURAYI SİL
-        finish()
 
         val valitadion: Boolean = validate(email ,password)
 

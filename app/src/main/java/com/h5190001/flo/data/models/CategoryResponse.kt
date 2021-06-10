@@ -1,4 +1,4 @@
-package com.h5190001.flo.models
+package com.h5190001.flo.data.models
 
 
 class CategoryResponse : ArrayList<CategoryResponseItem>()

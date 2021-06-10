@@ -1,9 +1,7 @@
 package com.h5190001.flo.utils
 
 import com.google.gson.Gson
-import com.h5190001.flo.models.CategoryResponse
-import com.h5190001.flo.models.CategoryResponseItem
-import com.h5190001.flo.models.Item
+import com.h5190001.flo.data.models.Item
 
 object ObjectUtil {
     fun <T> objectToString(objectData: T): String {

@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.AlertDialog
 import com.h5190001.flo.ui.list.ListActivity.Companion.list
 import com.h5190001.flo.ui.list.ListActivity.Companion.listAdapter
-import com.h5190001.flo.models.Item
+import com.h5190001.flo.data.models.Item
 
 object AlertdialogUtil {
     fun BuildSortAlert(activity: Activity, items: ArrayList<Item>) {

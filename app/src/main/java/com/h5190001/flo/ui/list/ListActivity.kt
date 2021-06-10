@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.h5190001.flo.R
 import com.h5190001.flo.ui.details.DetailsActivity
 import com.h5190001.flo.databinding.ActivityListBinding
-import com.h5190001.flo.interfaces.ItemClickListener
-import com.h5190001.flo.models.Item
+import com.h5190001.flo.utils.ItemClickListener
+import com.h5190001.flo.data.models.Item
 import com.h5190001.flo.utils.*
 import com.h5190001.flo.utils.AlertdialogUtil.BuildSortAlert
 import com.h5190001.flo.utils.ObjectUtil.jsonStringToObje

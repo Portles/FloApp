@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.h5190001.flo.data.repository.CategoryRepository
-import com.h5190001.flo.models.CategoryResponse
+import com.h5190001.flo.data.models.CategoryResponse
 import com.h5190001.flo.utils.ResourceStatus
 import kotlinx.coroutines.launch
 

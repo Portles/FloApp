@@ -1,4 +1,4 @@
-package com.h5190001.flo.interfaces
+package com.h5190001.flo.utils
 
 interface ItemClickListener {
     fun onItemClick(position: Int) {
