@@ -3,6 +3,8 @@
 
     <string name="error">ERROR</string>
 
+    <string name="login_debug">MVVM_TEST</string>
+
     <string name="network_internet">Internet</string>
     <string name="network_check_cellular">NetworkCapabilities.TRANSPORT_CELLULAR</string>
     <string name="network_check_wifi">NetworkCapabilities.TRANSPORT_WIFI</string>
@@ -42,4 +44,8 @@
     <string name="details_product_modal">Model</string>
     <string name="details_product_color">Renk</string>
     <string name="details_product_saya">Saya Malzeme</string>
+
+    <string name="list_button_change">DEĞİŞTİR</string>
+
+    <string name="loading">Yükleniyor…</string>
 </resources>

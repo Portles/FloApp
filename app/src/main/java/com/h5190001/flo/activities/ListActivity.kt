@@ -21,11 +21,12 @@ import kotlin.collections.ArrayList
 class ListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityListBinding
-    private lateinit var listAdapter: ListRecyclerViewAdapter
 
     var rcyclerviewState = 0
 
-    companion object { var list: List<Item>? = null }
+    companion object { var list: List<Item>? = null
+        lateinit var listAdapter: ListRecyclerViewAdapter
+    }
     var listArray= arrayListOf("Ayakkabı 1", "Ayakkabı 2") //TODO SEARCH KISMI
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,9 +50,6 @@ class ListActivity : AppCompatActivity() {
 
     private fun AlertDialogAction() {
         BuildSortAlert(this@ListActivity, list!! as ArrayList<Item>)
-        binding.apply {
-            listAdapter.notifyDataSetChanged()
-        }
     }
 
     private fun setRecyclerViewData() {

@@ -3,13 +3,15 @@
     <dimen name="log_button_angle">45</dimen>
     <dimen name="log_button_corner_radius">4dp</dimen>
 
+    <dimen name="log_img_mar_top">16dp</dimen>
+
     <dimen name="log_edittexts_left_padding">10dp</dimen>
     <dimen name="log_edittexts_right_padding">10dp</dimen>
 
     <dimen name="log_button_left_padding">10dp</dimen>
     <dimen name="log_button_right_padding">10dp</dimen>
 
-    <dimen name="log_edittext_email_top_padding">64dp</dimen>
+    <dimen name="log_edittext_email_top_padding">48dp</dimen>
     <dimen name="log_edittext_email_width">295dp</dimen>
     <dimen name="log_edittext_email_height">53dp</dimen>
 
@@ -17,7 +19,7 @@
     <dimen name="log_edittext_password_width">295dp</dimen>
     <dimen name="log_edittext_password_height">53dp</dimen>
 
-    <dimen name="log_button_top_padding">100dp</dimen>
+    <dimen name="log_button_top_padding">120dp</dimen>
     <dimen name="log_button_width">295dp</dimen>
     <dimen name="log_button_height">53dp</dimen>
 
@@ -41,6 +43,8 @@
     <dimen name="category_welcome_marginend">60dp</dimen>
 
     <dimen name="category_searchview_margin_top">60dp</dimen>
+
+    <dimen name="category_username_text_mar_top">24dp</dimen>
     
     <dimen name="list_products_margintop">56dp</dimen>
     <dimen name="list_products_size">36sp</dimen>

@@ -23,6 +23,7 @@
         android:layout_marginStart="@dimen/category_welcome_marginstart"
         android:layout_marginTop="@dimen/category_welcome_marginend"
         android:text="@string/category_welcome"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/profileImageView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,5 +58,17 @@
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toEndOf="@+id/categorySearchView"
         app:layout_constraintTop_toTopOf="@+id/categorySearchView" />
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/category_username_text_mar_top"
+        android:text="@string/error"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/welcomeTextView"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/welcomeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

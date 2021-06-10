@@ -3,6 +3,7 @@ package com.h5190001.flo.utils
 import android.app.Activity
 import android.app.AlertDialog
 import com.h5190001.flo.activities.ListActivity.Companion.list
+import com.h5190001.flo.activities.ListActivity.Companion.listAdapter
 import com.h5190001.flo.models.Item
 
 object AlertdialogUtil {
@@ -15,10 +16,12 @@ object AlertdialogUtil {
                 0 -> { /* İsme göre artan */
                     items.sortBy { it.name }
                     list = items
+                    listAdapter.notifyDataSetChanged()
                 }
                 1 -> { /* İsme göre azalan */
                     items.sortByDescending { it.name }
                     list = items
+                    listAdapter.notifyDataSetChanged()
                 }
             }
         }

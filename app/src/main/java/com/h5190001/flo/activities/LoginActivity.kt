@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
+import com.h5190001.flo.R
 import com.h5190001.flo.databinding.ActivityLoginBinding
 import com.h5190001.flo.models.UserResponse
 import com.h5190001.flo.user.UserViewModel
@@ -77,7 +78,7 @@ class LoginActivity : AppCompatActivity() {
 
             allUsersLiveData.observe(this@LoginActivity, Observer {
                 it.run {
-                    Log.e("Nxioterya","observe: "+it.toString())
+                    Log.e(applicationContext.getResources().getString(R.string.login_debug),it.toString())
                     users = it
                 }
             })
