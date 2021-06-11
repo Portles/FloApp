@@ -6,13 +6,99 @@
     android:layout_height="match_parent"
     tools:context=".ui.details.DetailsActivity">
 
+    <View
+        android:id="@+id/view6"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/skuText"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/sayaText"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/colorText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/error"
+        android:textColor="@color/details_specs_text"
         app:layout_constraintStart_toStartOf="@+id/color"
         app:layout_constraintTop_toBottomOf="@+id/color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="@dimen/details_view_margin_top"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productDetail"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="@dimen/details_view_margin_top"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productSpecs"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/brandText"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="@+id/brandText"
+        app:layout_constraintTop_toBottomOf="@+id/brandText"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/genderText"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/modalText"
+        app:layout_constraintStart_toStartOf="@+id/modalText"
+        app:layout_constraintTop_toBottomOf="@+id/modalText"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/colorText"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -145,6 +231,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_brandtext_mar_top"
         android:text="@string/error"
+        android:textColor="@color/details_specs_text"
         app:layout_constraintStart_toStartOf="@+id/brand"
         app:layout_constraintTop_toBottomOf="@+id/brand" />
 
@@ -153,6 +240,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/error"
+        android:textColor="@color/details_specs_text"
         app:layout_constraintStart_toStartOf="@+id/gender"
         app:layout_constraintTop_toBottomOf="@+id/gender" />
 
@@ -161,6 +249,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/error"
+        android:textColor="@color/details_specs_text"
         app:layout_constraintStart_toStartOf="@+id/sku"
         app:layout_constraintTop_toBottomOf="@+id/sku" />
 
@@ -169,6 +258,7 @@
         android:layout_width="@dimen/details_modalText_width"
         android:layout_height="@dimen/details_modalText_height"
         android:text="@string/error"
+        android:textColor="@color/details_specs_text"
         app:layout_constraintStart_toStartOf="@+id/modal"
         app:layout_constraintTop_toBottomOf="@+id/modal" />
 
@@ -177,6 +267,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/error"
+        android:textColor="@color/details_specs_text"
         app:layout_constraintStart_toStartOf="@+id/saya"
         app:layout_constraintTop_toBottomOf="@+id/saya" />
 
@@ -186,6 +277,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/details_spec_element_mar_top"
         android:text="@string/error"
+        android:textColor="@color/details_specs_text"
         app:layout_constraintStart_toEndOf="@+id/insideMaterial"
         app:layout_constraintTop_toTopOf="@+id/insideMaterial" />
 
@@ -193,18 +285,18 @@
         android:id="@+id/outsideMaterialText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/details_spec_element_mar_top"
         android:text="@string/error"
-        app:layout_constraintStart_toEndOf="@+id/outsideMaterial"
+        android:textColor="@color/details_specs_text"
+        app:layout_constraintStart_toStartOf="@+id/insideMaterialText"
         app:layout_constraintTop_toTopOf="@+id/outsideMaterial" />
 
     <TextView
         android:id="@+id/soleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/details_soletext_mar_start"
         android:text="@string/error"
-        app:layout_constraintStart_toEndOf="@+id/sole"
+        android:textColor="@color/details_specs_text"
+        app:layout_constraintStart_toStartOf="@+id/outsideMaterialText"
         app:layout_constraintTop_toTopOf="@+id/sole" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

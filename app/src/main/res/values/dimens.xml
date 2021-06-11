@@ -3,7 +3,7 @@
     <dimen name="log_button_angle">45</dimen>
     <dimen name="log_button_corner_radius">4dp</dimen>
 
-    <dimen name="log_img_mar_top">16dp</dimen>
+    <dimen name="log_img_mar_top">32dp</dimen>
 
     <dimen name="log_edittexts_left_padding">10dp</dimen>
     <dimen name="log_edittexts_right_padding">10dp</dimen>
@@ -11,7 +11,7 @@
     <dimen name="log_button_left_padding">10dp</dimen>
     <dimen name="log_button_right_padding">10dp</dimen>
 
-    <dimen name="log_edittext_email_top_padding">48dp</dimen>
+    <dimen name="log_edittext_email_top_padding">96dp</dimen>
     <dimen name="log_edittext_email_width">295dp</dimen>
     <dimen name="log_edittext_email_height">53dp</dimen>
 
@@ -80,5 +80,9 @@
 
     <dimen name="details_text_size">18sp</dimen>
     <dimen name="details_headers_text_size">24sp</dimen>
+
+    <dimen name="details_view_margin_top">8dp</dimen>
+    <dimen name="details_view_width">100dp</dimen>
+    <dimen name="details_view_height">1dp</dimen>
 
 </resources>

@@ -18,6 +18,7 @@ import com.h5190001.flo.data.models.CategoryResponseItem
 import com.h5190001.flo.data.models.UserResponseItem
 import com.h5190001.flo.ui.list.ListActivity
 import com.h5190001.flo.utils.Constants
+import com.h5190001.flo.utils.Constants.GRID_LAYOUT
 import com.h5190001.flo.utils.Constants.GRID_VIEW
 import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
 import com.h5190001.flo.utils.ObjectUtil.jsonStringToUserObject
@@ -103,7 +104,7 @@ class CategoryActivity : AppCompatActivity() {
                 }
             })
             binding.categoryRecyclerview.adapter = categoryAdapter
-            categoryRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_VIEW)
+            categoryRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_LAYOUT)
         }
     }
 

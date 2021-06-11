@@ -54,5 +54,13 @@
     <string name="loading">Yükleniyor…</string>
     <string name="wrong_pass_title">Şifre hatalı!</string>
     <string name="wrong_pass_message">Email ve şifre uyuşmuyor!</string>
-    <string name="wrong_pass_neg_button">TAMAM</string>
+    <string name="wrong_pass_neg_button">KAPAT</string>
+
+    <string name="sort_alert_title">Sırala</string>
+    <string name="sort_alert_sort">İsme göre artan</string>
+    <string name="sort_alert_descending_sort">İsme göre azalan</string>
+
+    <string name="log_alert_empty_places_title">Lütfen alanları doldurun!</string>
+    <string name="log_alert_empty_places_message">Email yada şifre boş!</string>
+    <string name="log_alert_empty_places_neg_button">KAPAT</string>
 </resources>

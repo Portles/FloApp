@@ -12,8 +12,9 @@ import com.h5190001.flo.utils.ItemClickListener
 import com.h5190001.flo.data.models.Item
 import com.h5190001.flo.utils.*
 import com.h5190001.flo.utils.AlertdialogUtil.BuildSortAlert
+import com.h5190001.flo.utils.Constants.GRID_LAYOUT
 import com.h5190001.flo.utils.Constants.GRID_VIEW
-import com.h5190001.flo.utils.Constants.LINEER_VIEW
+import com.h5190001.flo.utils.Constants.VERTICAL_VIEW
 import com.h5190001.flo.utils.ObjectUtil.jsonStringToObje
 import com.h5190001.flo.utils.ProgressDialogUtil.DissmisDialog
 import com.h5190001.flo.utils.ProgressDialogUtil.ShowDialog
@@ -24,7 +25,7 @@ class ListActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityListBinding
 
-    var rcyclerviewState = 0
+    var rcyclerviewState: Int = GRID_VIEW
 
     companion object { var list: List<Item>? = null
         lateinit var listAdapter: ListRecyclerViewAdapter
@@ -50,7 +51,7 @@ class ListActivity : AppCompatActivity() {
     }
 
     private fun AlertDialogAction() {
-        BuildSortAlert(this@ListActivity, list!! as ArrayList<Item>)
+        BuildSortAlert(applicationContext,this@ListActivity, list!! as ArrayList<Item>)
     }
 
     private fun setRecyclerViewData() {
@@ -74,21 +75,21 @@ class ListActivity : AppCompatActivity() {
 
     private fun SwitchRecyclerViewLayout() {
         binding.apply {
-            if (rcyclerviewState == 0) {
-                listRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_VIEW)
+            if (rcyclerviewState == GRID_VIEW) {
+                listRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_LAYOUT)
             } else {
                 listRecyclerview.layoutManager = LinearLayoutManager(applicationContext,LinearLayoutManager.VERTICAL,false)
             }
         }
     }
-                                                                                                        // TODO BURAYI ADAM ET
+
     private fun listenChangeRecyclerViewButton() {
         binding.apply {
             changeRecyclerviewButton.setOnClickListener {
-                if (rcyclerviewState == 0) {
-                    rcyclerviewState = 1
+                if (rcyclerviewState == GRID_VIEW) {
+                    rcyclerviewState = VERTICAL_VIEW
                 } else {
-                    rcyclerviewState = 0
+                    rcyclerviewState = GRID_VIEW
                 }
                 SwitchRecyclerViewLayout()
             }

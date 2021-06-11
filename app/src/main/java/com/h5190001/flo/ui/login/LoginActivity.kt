@@ -75,6 +75,7 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+        CustomAlertDialog(this@LoginActivity,getString(R.string.log_alert_empty_places_title),getString(R.string.log_alert_empty_places_message), getString(R.string.log_alert_empty_places_neg_button))
         return false
     }
 
