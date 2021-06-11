@@ -4,7 +4,7 @@ class UserResponse : ArrayList<UserResponseItem>()
 
 data class UserResponseItem(
     val email: String?,
-    val userName: String?,
+    val username: String?,
     val password: String?,
     val pp_loc: String?
 )

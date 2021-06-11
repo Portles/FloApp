@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_product_detail_mar_top"
         android:text="@string/details_product"
+        android:textSize="@dimen/details_headers_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_product_spec_mar_top"
         android:text="@string/details_product_info"
+        android:textSize="@dimen/details_headers_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_spec_element_mar_top"
         android:text="@string/details_product_gender"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/brand"
         app:layout_constraintTop_toBottomOf="@+id/brand" />
 
@@ -62,6 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_spec_element_mar_top"
         android:text="@string/details_product_color"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/modal"
         app:layout_constraintTop_toBottomOf="@+id/modal" />
 
@@ -71,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_brand_mar_top"
         android:text="@string/details_product_brand"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/productSpecs"
         app:layout_constraintTop_toBottomOf="@+id/productSpecs" />
 
@@ -80,6 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/details_modal_mar_start"
         android:text="@string/details_product_modal"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintBottom_toBottomOf="@+id/brand"
         app:layout_constraintStart_toEndOf="@+id/brand" />
 
@@ -89,6 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_spec_element_mar_top"
         android:text="@string/details_product_saya"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/color"
         app:layout_constraintTop_toBottomOf="@+id/color" />
 
@@ -98,6 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_spec_element_mar_top"
         android:text="@string/details_product_sku"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/gender"
         app:layout_constraintTop_toBottomOf="@+id/gender" />
 
@@ -107,6 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_material_mar_top"
         android:text="@string/details_product_inside"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/productDetail"
         app:layout_constraintTop_toBottomOf="@+id/productDetail" />
 
@@ -116,6 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_material_mar_top"
         android:text="@string/details_product_outside"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/insideMaterial"
         app:layout_constraintTop_toBottomOf="@+id/insideMaterial" />
 
@@ -125,6 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/details_material_mar_top"
         android:text="@string/details_product_sole"
+        android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/outsideMaterial"
         app:layout_constraintTop_toBottomOf="@+id/outsideMaterial" />
 

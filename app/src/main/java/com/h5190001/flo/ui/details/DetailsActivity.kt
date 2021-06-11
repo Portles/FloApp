@@ -20,13 +20,13 @@ class DetailsActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        setBindings()
+        initBinding()
         val item: Item = ObjectUtil.jsonStringToItemObje(intent.getStringExtra(applicationContext.getResources().getString(
             R.string.data))!!)
         initData(item)
     }
 
-    private fun setBindings() {
+    private fun initBinding() {
         binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }

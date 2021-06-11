@@ -9,13 +9,16 @@ import com.h5190001.flo.R
 import com.h5190001.flo.ui.categories.CategoryActivity
 import com.h5190001.flo.databinding.ActivityLoginBinding
 import com.h5190001.flo.data.models.UserResponse
+import com.h5190001.flo.data.models.UserResponseItem
 import com.h5190001.flo.utils.AlertboxUtil.CustomAlertDialog
+import com.h5190001.flo.utils.ObjectUtil.objectToString
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
     var userViewModel: UserViewModel?=null
     var users: UserResponse? = null
+    var loggedUser: UserResponseItem? =  null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +27,12 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        setBindings()
+        initBinding()
         getUsers()
         initButtonAction()
     }
 
-    private fun setBindings() {
+    private fun initBinding() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
@@ -50,10 +53,11 @@ class LoginActivity : AppCompatActivity() {
         val email: String = binding.editTextTextEmailAddress.text.toString()
         val password: String = binding.editTextTextPassword.text.toString()
 
-        val valitadion: Boolean = validate(email ,password)
+        val validation: Boolean = validate(email ,password)
 
-        if (valitadion) {
+        if (validation) {
             val intent = Intent(this@LoginActivity, CategoryActivity::class.java)
+            intent.putExtra(getString(R.string.loggedUser), objectToString(loggedUser))
             startActivity(intent)
             finish()
         }
@@ -66,6 +70,7 @@ class LoginActivity : AppCompatActivity() {
                     CustomAlertDialog(this@LoginActivity,getString(R.string.wrong_pass_title),getString(R.string.wrong_pass_message), getString(R.string.wrong_pass_neg_button))
                     return false
                 } else if(user.email == email && user.password == password) {
+                    loggedUser = user
                     return true
                 }
             }
@@ -89,7 +94,6 @@ class LoginActivity : AppCompatActivity() {
             })
 
             loading?.observe(this@LoginActivity, Observer {
-
                 //Handle loading
             })
         }

@@ -7,6 +7,7 @@
     <string name="list">list</string>
     <string name="language">TR-tr</string>
     <string name="data">data</string>
+    <string name="loggedUser">user</string>
 
     <string name="network_internet">Internet</string>
     <string name="network_check_cellular">NetworkCapabilities.TRANSPORT_CELLULAR</string>

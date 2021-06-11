@@ -23,7 +23,6 @@ class SplashActivity : AppCompatActivity() {
         checkNetwork()
     }
 
-
     @RequiresApi(Build.VERSION_CODES.M)
     private fun checkNetwork() {
             val isOnline = NetworkUtils.isOnline(applicationContext)

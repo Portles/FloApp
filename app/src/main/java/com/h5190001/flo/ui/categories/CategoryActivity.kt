@@ -15,7 +15,12 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.h5190001.flo.R
 import com.h5190001.flo.data.models.CategoryResponse
 import com.h5190001.flo.data.models.CategoryResponseItem
+import com.h5190001.flo.data.models.UserResponseItem
 import com.h5190001.flo.ui.list.ListActivity
+import com.h5190001.flo.utils.Constants
+import com.h5190001.flo.utils.Constants.GRID_VIEW
+import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
+import com.h5190001.flo.utils.ObjectUtil.jsonStringToUserObject
 import com.h5190001.flo.utils.ObjectUtil.objectToString
 import com.h5190001.flo.utils.ProgressDialogUtil.DissmisDialog
 import com.h5190001.flo.utils.ProgressDialogUtil.ShowDialog
@@ -35,14 +40,27 @@ class CategoryActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        setBinds()
+        initBinding()
         ShowDialog(this@CategoryActivity)
+        getUserData()
         setRecyclerViewData()
     }
 
-    private fun setBinds() {
+    private fun initBinding() {
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+    }
+
+    private fun getUserData() {
+        val user: UserResponseItem = jsonStringToUserObject(intent.getStringExtra(applicationContext.getResources().getString(R.string.loggedUser)))
+        user.let {
+            binding.apply {
+                val url: String = Constants.USER_IMG_URL + it.pp_loc
+                profileImageView.getImageFromUrl(url)
+                usernameText.text = it.username
+            }
+        }
+
     }
 
     private fun setRecyclerViewData() {
@@ -85,13 +103,8 @@ class CategoryActivity : AppCompatActivity() {
                 }
             })
             binding.categoryRecyclerview.adapter = categoryAdapter
-            categoryRecyclerview.layoutManager = GridLayoutManager(applicationContext,2) //TODO İKİYİ ENUM YAP
+            categoryRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_VIEW)
         }
-    }
-
-    private fun ArraylistToList(cat: CategoryResponse): List<CategoryResponse> {
-        val arrList = listOf(cat)
-        return arrList
     }
 
     private fun SearchButton() {

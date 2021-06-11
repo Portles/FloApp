@@ -34,14 +34,14 @@
         android:layout_marginStart="@dimen/category_searchview_marginstart"
         android:layout_marginTop="@dimen/category_searchview_margin_top"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageView">
-    </SearchView>
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecyclerview"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/category_rcrycler_height"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/category_rcrycler_margin_top"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,10 +52,11 @@
         android:id="@+id/searchButton"
         android:layout_width="@dimen/category_search_button_width"
         android:layout_height="@dimen/category_search_button_height"
+        android:layout_marginTop="4dp"
         android:background="@drawable/login_button"
         android:text="@string/category_searchview"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toEndOf="@+id/categorySearchView"
         app:layout_constraintTop_toTopOf="@+id/categorySearchView" />
 

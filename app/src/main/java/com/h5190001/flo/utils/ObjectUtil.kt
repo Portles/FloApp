@@ -2,6 +2,7 @@ package com.h5190001.flo.utils
 
 import com.google.gson.Gson
 import com.h5190001.flo.data.models.Item
+import com.h5190001.flo.data.models.UserResponseItem
 
 object ObjectUtil {
     fun <T> objectToString(objectData: T): String {
@@ -9,9 +10,9 @@ object ObjectUtil {
         return gson.toJson(objectData)
     }
 
-    fun ObjeToJsonString(liste: List<Item>?): String? {
+    fun jsonStringToUserObject(jsonString: String?): UserResponseItem {
         val gson = Gson()
-        return gson.toJson(liste)
+        return gson.fromJson(jsonString , UserResponseItem::class.java)
     }
 
     fun jsonStringToObje(jsonString: String?): List<Item> {

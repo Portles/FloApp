@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.h5190001.flo.R
 import com.h5190001.flo.ui.details.DetailsActivity
 import com.h5190001.flo.databinding.ActivityListBinding
@@ -11,6 +12,8 @@ import com.h5190001.flo.utils.ItemClickListener
 import com.h5190001.flo.data.models.Item
 import com.h5190001.flo.utils.*
 import com.h5190001.flo.utils.AlertdialogUtil.BuildSortAlert
+import com.h5190001.flo.utils.Constants.GRID_VIEW
+import com.h5190001.flo.utils.Constants.LINEER_VIEW
 import com.h5190001.flo.utils.ObjectUtil.jsonStringToObje
 import com.h5190001.flo.utils.ProgressDialogUtil.DissmisDialog
 import com.h5190001.flo.utils.ProgressDialogUtil.ShowDialog
@@ -34,14 +37,14 @@ class ListActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        setBindings()
+        initBinding()
         ShowDialog(this@ListActivity)
         list = jsonStringToObje(intent.getStringExtra(applicationContext.getResources().getString(R.string.list))!!)
         setRecyclerViewData()
         listenSortButton()
     }
 
-    private fun setBindings() {
+    private fun initBinding() {
         binding = ActivityListBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
@@ -62,7 +65,7 @@ class ListActivity : AppCompatActivity() {
                     }
                 })
                 binding.listRecyclerview.adapter = listAdapter
-                listRecyclerview.layoutManager = GridLayoutManager(applicationContext,2)
+                listRecyclerview.layoutManager = GridLayoutManager(applicationContext,GRID_VIEW)
                 DissmisDialog()
                 listenChangeRecyclerViewButton()
             }
@@ -72,9 +75,9 @@ class ListActivity : AppCompatActivity() {
     private fun SwitchRecyclerViewLayout() {
         binding.apply {
             if (rcyclerviewState == 0) {
-                listRecyclerview.layoutManager = GridLayoutManager(applicationContext, 2)
+                listRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_VIEW)
             } else {
-                listRecyclerview.layoutManager = GridLayoutManager(applicationContext, 1)
+                listRecyclerview.layoutManager = LinearLayoutManager(applicationContext,LinearLayoutManager.VERTICAL,false)
             }
         }
     }
