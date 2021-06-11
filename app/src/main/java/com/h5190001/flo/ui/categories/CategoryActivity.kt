@@ -75,7 +75,7 @@ class CategoryActivity : AppCompatActivity() {
                     DissmisDialog()
                     categoryList = it
                     setCategoryRecyclerView(categoryList!!)
-                    SearchButton()
+                    listenSearchBar()
                 }
             })
 
@@ -108,14 +108,6 @@ class CategoryActivity : AppCompatActivity() {
         }
     }
 
-    private fun SearchButton() {
-        binding.apply {
-            searchButton.setOnClickListener {
-                listenSearchBar()
-            }
-        }
-    }
-
     private fun filter(search: String?) {
         search?.let {
             categoryList?.let {
@@ -128,21 +120,29 @@ class CategoryActivity : AppCompatActivity() {
 
     private fun listenSearchBar() {
         binding.apply {
-                categorySearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener //TODO BUTONA BAĞLA
+                categorySearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener
                 {
                 override fun onQueryTextSubmit(query: String?): Boolean {
-                    filter(query.toString().toLowerCase(Locale(applicationContext.getResources().getString(R.string.language))))
+
                     return false
                 }
                 override fun onQueryTextChange(newText: String?): Boolean {
                     if(newText.isNullOrBlank()) {
                         categoryList?.let { categoryAdapter.setData(it) }
                         categoryAdapter.notifyDataSetChanged()
+                    } else {
+                        searchButton.setOnClickListener {
+                            searchIt(newText)
+                        }
                     }
                     return false
                 }
                 })
         }
+    }
+
+    private fun searchIt(query: String?) {
+        filter(query.toString().toLowerCase(Locale(applicationContext.getResources().getString(R.string.language))))
     }
 
     override fun onBackPressed() {

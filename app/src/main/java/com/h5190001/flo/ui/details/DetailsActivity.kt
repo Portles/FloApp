@@ -32,6 +32,7 @@ class DetailsActivity : AppCompatActivity() {
     }
 
     private fun initData(item: Item) {
+
         val url: String = Constants.CATEGORY_IMG_URL + item.pic_loc
 
         binding.apply {

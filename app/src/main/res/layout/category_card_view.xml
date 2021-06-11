@@ -15,14 +15,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="200dp"
-            android:layout_height="200dp">
+            android:layout_width="@dimen/category_card_view_layout_width"
+            android:layout_height="@dimen/category_card_view_layout_height">
 
             <ImageView
                 android:id="@+id/category_image"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_marginTop="4dp"
+                android:layout_width="@dimen/category_card_view_img_layout_width"
+                android:layout_height="@dimen/category_card_view_img_layout_height"
+                android:layout_marginTop="@dimen/category_card_view_img_mar_top"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.48"
                 app:layout_constraintStart_toStartOf="parent"
@@ -33,9 +33,9 @@
                 android:id="@+id/category_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_marginBottom="10dp"
-                android:text="TextView"
+                android:layout_marginTop="@dimen/category_card_view_text_mar_top"
+                android:layout_marginBottom="@dimen/category_card_view_text_mar_bottom"
+                android:text="@string/error"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

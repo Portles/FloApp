@@ -7,24 +7,24 @@
     tools:context=".ui.details.DetailsActivity">
 
     <View
-        android:id="@+id/view6"
+        android:id="@+id/view5"
         android:layout_width="@dimen/details_view_width"
         android:layout_height="@dimen/details_view_height"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/details_view_margin_top"
         android:background="@android:color/darker_gray"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/skuText"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/colorText"
         tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/view7"
-        android:layout_width="@dimen/details_view_width"
-        android:layout_height="@dimen/details_view_height"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintStart_toStartOf="@+id/view5"
-        app:layout_constraintTop_toBottomOf="@+id/sayaText"
-        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_brand_mar_top"
+        android:text="@string/details_product_brand"
+        android:textSize="@dimen/details_text_size"
+        app:layout_constraintStart_toStartOf="@+id/productSpecs"
+        app:layout_constraintTop_toBottomOf="@+id/productSpecs" />
 
     <TextView
         android:id="@+id/colorText"
@@ -47,57 +47,15 @@
         tools:ignore="MissingConstraints" />
 
     <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/details_view_height"
-        android:layout_marginTop="@dimen/details_view_margin_top"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/productSpecs"
-        tools:ignore="MissingConstraints" />
-
-    <View
         android:id="@+id/view2"
         android:layout_width="@dimen/details_view_width"
         android:layout_height="@dimen/details_view_height"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/details_view_first_margin_top"
         android:background="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="@+id/brandText"
         app:layout_constraintHorizontal_bias="0.196"
         app:layout_constraintStart_toStartOf="@+id/brandText"
         app:layout_constraintTop_toBottomOf="@+id/brandText"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="@dimen/details_view_width"
-        android:layout_height="@dimen/details_view_height"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintStart_toStartOf="@+id/view2"
-        app:layout_constraintTop_toBottomOf="@+id/genderText"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="@dimen/details_view_width"
-        android:layout_height="@dimen/details_view_height"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintEnd_toEndOf="@+id/modalText"
-        app:layout_constraintStart_toStartOf="@+id/modalText"
-        app:layout_constraintTop_toBottomOf="@+id/modalText"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:id="@+id/view5"
-        android:layout_width="@dimen/details_view_width"
-        android:layout_height="@dimen/details_view_height"
-        android:layout_marginTop="8dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toBottomOf="@+id/colorText"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -112,16 +70,24 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/productDetail"
+        android:id="@+id/color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_product_detail_mar_top"
-        android:text="@string/details_product"
-        android:textSize="@dimen/details_headers_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="@dimen/details_spec_element_mar_top"
+        android:text="@string/details_product_color"
+        android:textSize="@dimen/details_text_size"
+        app:layout_constraintStart_toStartOf="@+id/modal"
+        app:layout_constraintTop_toBottomOf="@+id/modal" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="@dimen/details_view_margin_top"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/genderText"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/productSpecs"
@@ -135,6 +101,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productDetail" />
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="@dimen/details_view_margin_top"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productSpecs"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/gender"
         android:layout_width="wrap_content"
@@ -144,26 +121,6 @@
         android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/brand"
         app:layout_constraintTop_toBottomOf="@+id/brand" />
-
-    <TextView
-        android:id="@+id/color"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_spec_element_mar_top"
-        android:text="@string/details_product_color"
-        android:textSize="@dimen/details_text_size"
-        app:layout_constraintStart_toStartOf="@+id/modal"
-        app:layout_constraintTop_toBottomOf="@+id/modal" />
-
-    <TextView
-        android:id="@+id/brand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/details_brand_mar_top"
-        android:text="@string/details_product_brand"
-        android:textSize="@dimen/details_text_size"
-        app:layout_constraintStart_toStartOf="@+id/productSpecs"
-        app:layout_constraintTop_toBottomOf="@+id/productSpecs" />
 
     <TextView
         android:id="@+id/modal"
@@ -176,6 +133,28 @@
         app:layout_constraintStart_toEndOf="@+id/brand" />
 
     <TextView
+        android:id="@+id/productDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/details_product_detail_mar_top"
+        android:text="@string/details_product"
+        android:textSize="@dimen/details_headers_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="@dimen/details_view_margin_top"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/sayaText"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
         android:id="@+id/saya"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -184,6 +163,27 @@
         android:textSize="@dimen/details_text_size"
         app:layout_constraintStart_toStartOf="@+id/color"
         app:layout_constraintTop_toBottomOf="@+id/color" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="@dimen/details_view_margin_top"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="@+id/modalText"
+        app:layout_constraintStart_toStartOf="@+id/modalText"
+        app:layout_constraintTop_toBottomOf="@+id/modalText"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="@dimen/details_view_width"
+        android:layout_height="@dimen/details_view_height"
+        android:layout_marginTop="@dimen/details_view_margin_top"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/skuText"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/sku"
@@ -257,6 +257,7 @@
         android:id="@+id/modalText"
         android:layout_width="@dimen/details_modalText_width"
         android:layout_height="@dimen/details_modalText_height"
+        android:layout_marginTop="@dimen/details_brandtext_mar_top"
         android:text="@string/error"
         android:textColor="@color/details_specs_text"
         app:layout_constraintStart_toStartOf="@+id/modal"

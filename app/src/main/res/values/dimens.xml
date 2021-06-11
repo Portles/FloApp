@@ -33,6 +33,7 @@
 
     <dimen name="category_search_button_width">104dp</dimen>
     <dimen name="category_search_button_height">40dp</dimen>
+    <dimen name="category_search_mar_top">4dp</dimen>
 
     <dimen name="category_imgview_width">100dp</dimen>
     <dimen name="category_imgview_height">100dp</dimen>
@@ -41,6 +42,8 @@
 
     <dimen name="category_welcome_marginstart">60dp</dimen>
     <dimen name="category_welcome_marginend">60dp</dimen>
+
+    <dimen name="category_username_text_size">16sp</dimen>
 
     <dimen name="category_searchview_margin_top">60dp</dimen>
 
@@ -60,6 +63,12 @@
     <dimen name="list_sortbutton_height">44dp</dimen>
     <dimen name="list_sortbutton_mar_start">16dp</dimen>
     <dimen name="list_sortbutton_mar_top">32dp</dimen>
+
+    <dimen name="list_button_mar_start">48dp</dimen>
+    <dimen name="list_gif_width">100dp</dimen>
+    <dimen name="list_gif_height">87dp</dimen>
+    <dimen name="list_gif_mar_top">16dp</dimen>
+    <dimen name="list_gif_mar_end">68dp</dimen>
 
 
     <dimen name="details_img_size">250dp</dimen>
@@ -81,8 +90,33 @@
     <dimen name="details_text_size">18sp</dimen>
     <dimen name="details_headers_text_size">24sp</dimen>
 
+    <dimen name="details_view_first_margin_top">4dp</dimen>
     <dimen name="details_view_margin_top">8dp</dimen>
     <dimen name="details_view_width">100dp</dimen>
     <dimen name="details_view_height">1dp</dimen>
+
+    <dimen name="category_card_view_layout_width">200dp</dimen>
+    <dimen name="category_card_view_layout_height">200dp</dimen>
+    <dimen name="category_card_view_img_layout_width">125dp</dimen>
+    <dimen name="category_card_view_img_layout_height">125dp</dimen>
+    <dimen name="category_card_view_img_mar_top">4dp</dimen>
+    <dimen name="category_card_view_text_mar_top">14dp</dimen>
+    <dimen name="category_card_view_text_mar_bottom">10dp</dimen>
+
+    <dimen name="progress_dialog_layout_width">48dp</dimen>
+    <dimen name="progress_dialog_layout_height">48dp</dimen>
+    <dimen name="progress_dialog_mar_top">16dp</dimen>
+    <dimen name="progress_dialog_mar_bot">10dp</dimen>
+    <dimen name="progress_dialog_text_size">24sp</dimen>
+
+    <dimen name="list_card_view_layout_width">125dp</dimen>
+    <dimen name="list_card_view_layout_height">125dp</dimen>
+    <dimen name="list_card_view_mar_top">4dp</dimen>
+    <dimen name="list_card_view_img_layout_width">37dp</dimen>
+    <dimen name="list_card_view_img_layout_height">37dp</dimen>
+    <dimen name="list_card_view_text_mar_start">300dp</dimen>
+    <dimen name="list_card_view_text_mar_top">14dp</dimen>
+    <dimen name="list_card_view_text_mar_end">300dp</dimen>
+    <dimen name="list_card_view_text_mar_bottom">10dp</dimen>
 
 </resources>

@@ -20,9 +20,9 @@
 
             <ImageView
                 android:id="@+id/list_image"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_marginTop="4dp"
+                android:layout_width="@dimen/list_card_view_layout_width"
+                android:layout_height="@dimen/list_card_view_layout_height"
+                android:layout_marginTop="@dimen/list_card_view_mar_top"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.48"
                 app:layout_constraintStart_toStartOf="parent"
@@ -31,8 +31,8 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="37dp"
-                android:layout_height="37dp"
+                android:layout_width="@dimen/list_card_view_img_layout_width"
+                android:layout_height="@dimen/list_card_view_img_layout_height"
                 app:layout_constraintEnd_toEndOf="@+id/list_image"
                 app:layout_constraintTop_toTopOf="@+id/list_image"
                 app:srcCompat="@drawable/heart" />
@@ -41,11 +41,11 @@
                 android:id="@+id/list_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="300dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="300dp"
-                android:layout_marginBottom="10dp"
-                android:text="TextView"
+                android:layout_marginStart="@dimen/list_card_view_text_mar_start"
+                android:layout_marginTop="@dimen/list_card_view_text_mar_top"
+                android:layout_marginEnd="@dimen/list_card_view_text_mar_end"
+                android:layout_marginBottom="@dimen/list_card_view_text_mar_bottom"
+                android:text="@string/error"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

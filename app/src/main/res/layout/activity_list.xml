@@ -45,17 +45,17 @@
         android:id="@+id/changeRecyclerviewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="@dimen/list_button_mar_start"
         android:text="@string/list_button_change"
         app:layout_constraintStart_toEndOf="@+id/sortButton"
         app:layout_constraintTop_toTopOf="@+id/sortButton" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
-        android:layout_width="100dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="68dp"
+        android:layout_width="@dimen/list_gif_width"
+        android:layout_height="@dimen/list_gif_height"
+        android:layout_marginTop="@dimen/list_gif_mar_top"
+        android:layout_marginEnd="@dimen/list_gif_mar_end"
         android:src="@drawable/flo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
