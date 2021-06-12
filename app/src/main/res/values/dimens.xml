@@ -58,6 +58,7 @@
 
     <dimen name="list_switch_mar_start">52dp</dimen>
     <dimen name="list_switch_mar_top">8dp</dimen>
+    <dimen name="list_switch_width">100dp</dimen>
 
     <dimen name="list_sortbutton_width">214dp</dimen>
     <dimen name="list_sortbutton_height">44dp</dimen>

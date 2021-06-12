@@ -63,4 +63,6 @@
     <string name="log_alert_empty_places_title">Lütfen alanları doldurun!</string>
     <string name="log_alert_empty_places_message">Email yada şifre boş!</string>
     <string name="log_alert_empty_places_neg_button">KAPAT</string>
+    <string name="list_vertical_view_text">Dikey Görünüm</string>
+    <string name="list_grid_view_text">Karesel Görünüm</string>
 </resources>

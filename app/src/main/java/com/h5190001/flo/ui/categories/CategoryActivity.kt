@@ -7,7 +7,7 @@ import android.util.Log
 import android.widget.SearchView
 import android.widget.Toast
 import com.h5190001.flo.databinding.ActivityCategoryBinding
-import com.h5190001.flo.utils.ItemClickListener
+import com.h5190001.flo.utils.interfaces.ItemClickListener
 import com.h5190001.flo.utils.AlertdialogUtil
 import java.util.*
 import androidx.lifecycle.Observer
@@ -42,7 +42,7 @@ class CategoryActivity : AppCompatActivity() {
         initBinding()
         ShowDialog(this@CategoryActivity)
         getUserData()
-        setRecyclerViewData()
+        initRecyclerViewData()
     }
 
     private fun initBinding() {
@@ -62,17 +62,16 @@ class CategoryActivity : AppCompatActivity() {
 
     }
 
-    private fun setRecyclerViewData() {
+    private fun initRecyclerViewData() {
         categoryViewModel = CategoryViewModel()
 
         categoryViewModel?.apply {
             categorysLiveData.observe(this@CategoryActivity, Observer {
                 it.run {
                     Log.e(applicationContext.getResources().getString(R.string.login_debug),it.toString())
-                    setCategoryRecyclerView(this)
                     DissmisDialog()
                     categoryList = it
-                    setCategoryRecyclerView(categoryList!!)
+                    initCategoryRecyclerView(categoryList!!)
                     listenSearchBar()
                 }
             })
@@ -90,11 +89,10 @@ class CategoryActivity : AppCompatActivity() {
         }
     }
 
-    private fun setCategoryRecyclerView(categoryList: List<CategoryResponseItem>) {
+    private fun initCategoryRecyclerView(categoryList: List<CategoryResponseItem>) {
         binding.apply {
             categoryAdapter = CategoryRecyclerViewAdapter(categoryList,object : ItemClickListener {
                 override fun onItemClick(position: Int) {
-                    Toast.makeText(applicationContext,categoryList[position].categoryName,Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@CategoryActivity, ListActivity::class.java)
                     val data: String = objectToString(categoryList[position].Items)
                     intent.putExtra(applicationContext.getResources().getString(R.string.list),data)

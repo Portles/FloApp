@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.h5190001.flo.R
 import com.h5190001.flo.ui.details.DetailsActivity
 import com.h5190001.flo.databinding.ActivityListBinding
-import com.h5190001.flo.utils.ItemClickListener
+import com.h5190001.flo.utils.interfaces.ItemClickListener
 import com.h5190001.flo.data.models.Item
 import com.h5190001.flo.utils.*
 import com.h5190001.flo.utils.AlertdialogUtil.BuildSortAlert
@@ -77,8 +77,10 @@ class ListActivity : AppCompatActivity() {
         binding.apply {
             if (rcyclerviewState == GRID_VIEW) {
                 listRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_LAYOUT)
+                changeRecyclerviewButton.text = getString(R.string.list_vertical_view_text)
             } else {
                 listRecyclerview.layoutManager = LinearLayoutManager(applicationContext,LinearLayoutManager.VERTICAL,false)
+                changeRecyclerviewButton.text = getString(R.string.list_grid_view_text)
             }
         }
     }

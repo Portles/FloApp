@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.h5190001.flo.utils.Constants
 import com.h5190001.flo.databinding.ListCardViewBinding
-import com.h5190001.flo.utils.ItemClickListener
+import com.h5190001.flo.utils.interfaces.ItemClickListener
 import com.h5190001.flo.data.models.Item
 import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
 

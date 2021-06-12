@@ -43,10 +43,11 @@
 
     <Button
         android:id="@+id/changeRecyclerviewButton"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/list_switch_width"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/list_button_mar_start"
-        android:text="@string/list_button_change"
+        android:text="@string/list_vertical_view_text"
+        app:layout_constraintBottom_toBottomOf="@+id/sortButton"
         app:layout_constraintStart_toEndOf="@+id/sortButton"
         app:layout_constraintTop_toTopOf="@+id/sortButton" />
 

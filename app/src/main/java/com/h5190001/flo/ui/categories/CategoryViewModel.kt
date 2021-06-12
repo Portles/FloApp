@@ -7,7 +7,7 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.h5190001.flo.data.repository.CategoryRepository
 import com.h5190001.flo.data.models.CategoryResponse
-import com.h5190001.flo.utils.ResourceStatus
+import com.h5190001.flo.utils.enums.ResourceStatusEnum
 import kotlinx.coroutines.launch
 
 class CategoryViewModel : ViewModel() {
@@ -29,16 +29,16 @@ class CategoryViewModel : ViewModel() {
             .asLiveData(viewModelScope.coroutineContext).observeForever {
 
                 when(it.status) {
-                    ResourceStatus.LOADING -> {
+                    ResourceStatusEnum.LOADING -> {
                         loading?.postValue(true)
                     }
 
-                    ResourceStatus.SUCCESS -> {
+                    ResourceStatusEnum.SUCCESS -> {
                         categorysLiveData.postValue(it.data!!)
                         loading?.postValue(false)
                     }
 
-                    ResourceStatus.ERROR -> {
+                    ResourceStatusEnum.ERROR -> {
                         Log.e("ERROR", "${it.throwable}")
                         error.postValue(it.throwable!!)
                         loading?.postValue(false)

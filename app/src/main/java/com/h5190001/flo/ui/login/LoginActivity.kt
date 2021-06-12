@@ -38,10 +38,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun initButtonAction() {
-        setLoginButtonListener()
+        initLoginButtonListener()
     }
 
-    private fun setLoginButtonListener() {
+    private fun initLoginButtonListener() {
         binding.apply {
             logButton.setOnClickListener() {
                 logUser()
