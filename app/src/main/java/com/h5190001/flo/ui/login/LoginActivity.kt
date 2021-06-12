@@ -10,7 +10,7 @@ import com.h5190001.flo.ui.categories.CategoryActivity
 import com.h5190001.flo.databinding.ActivityLoginBinding
 import com.h5190001.flo.data.models.UserResponse
 import com.h5190001.flo.data.models.UserResponseItem
-import com.h5190001.flo.utils.AlertboxUtil.CustomAlertDialog
+import com.h5190001.flo.utils.AlertdialogUtil.CustomAlertDialog
 import com.h5190001.flo.utils.ObjectUtil.objectToString
 
 class LoginActivity : AppCompatActivity() {

@@ -41,7 +41,7 @@ class ListActivity : AppCompatActivity() {
         initBinding()
         ShowDialog(this@ListActivity)
         list = jsonStringToObje(intent.getStringExtra(applicationContext.getResources().getString(R.string.list))!!)
-        setRecyclerViewData()
+        initRecyclerViewData()
         listenSortButton()
     }
 
@@ -54,7 +54,7 @@ class ListActivity : AppCompatActivity() {
         BuildSortAlert(applicationContext,this@ListActivity, list!! as ArrayList<Item>)
     }
 
-    private fun setRecyclerViewData() {
+    private fun initRecyclerViewData() {
         binding.apply {
             list.let {
                 listAdapter = ListRecyclerViewAdapter(it!!, object : ItemClickListener {
@@ -96,7 +96,6 @@ class ListActivity : AppCompatActivity() {
         }
     }
 
-    //SEARCH PLACE
     private fun listenSortButton() {
         binding.apply {
             sortButton.setOnClickListener() {

@@ -8,18 +8,16 @@ import android.widget.SearchView
 import android.widget.Toast
 import com.h5190001.flo.databinding.ActivityCategoryBinding
 import com.h5190001.flo.utils.ItemClickListener
-import com.h5190001.flo.utils.AlertboxUtil
+import com.h5190001.flo.utils.AlertdialogUtil
 import java.util.*
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import com.h5190001.flo.R
-import com.h5190001.flo.data.models.CategoryResponse
 import com.h5190001.flo.data.models.CategoryResponseItem
 import com.h5190001.flo.data.models.UserResponseItem
 import com.h5190001.flo.ui.list.ListActivity
 import com.h5190001.flo.utils.Constants
 import com.h5190001.flo.utils.Constants.GRID_LAYOUT
-import com.h5190001.flo.utils.Constants.GRID_VIEW
 import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
 import com.h5190001.flo.utils.ObjectUtil.jsonStringToUserObject
 import com.h5190001.flo.utils.ObjectUtil.objectToString
@@ -146,6 +144,6 @@ class CategoryActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        AlertboxUtil.QuitAlertDialog(applicationContext, this@CategoryActivity)
+        AlertdialogUtil.QuitAlertDialog(applicationContext, this@CategoryActivity)
     }
 }
