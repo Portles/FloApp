@@ -60,10 +60,12 @@
     <dimen name="list_switch_mar_top">8dp</dimen>
     <dimen name="list_switch_width">100dp</dimen>
 
-    <dimen name="list_sortbutton_width">214dp</dimen>
+    <dimen name="list_sortbutton_width">200dp</dimen>
     <dimen name="list_sortbutton_height">44dp</dimen>
     <dimen name="list_sortbutton_mar_start">16dp</dimen>
     <dimen name="list_sortbutton_mar_top">32dp</dimen>
+
+    <dimen name="list_rcryclerview_change_switch_mar_start">60dp</dimen>
 
     <dimen name="list_button_mar_start">48dp</dimen>
     <dimen name="list_gif_width">100dp</dimen>

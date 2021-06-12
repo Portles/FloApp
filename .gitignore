@@ -76,6 +76,7 @@ fastlane/readme.md
 
 # Version control
 vcs.xml
+.DS_Store
 
 # lint
 lint/intermediates/

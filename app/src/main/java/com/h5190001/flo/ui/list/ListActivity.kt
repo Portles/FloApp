@@ -1,5 +1,6 @@
 package com.h5190001.flo.ui.list
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -42,7 +43,7 @@ class ListActivity : AppCompatActivity() {
         ShowDialog(this@ListActivity)
         list = jsonStringToObje(intent.getStringExtra(applicationContext.getResources().getString(R.string.list))!!)
         initRecyclerViewData()
-        listenSortButton()
+        ListenSortButton()
     }
 
     private fun initBinding() {
@@ -68,37 +69,26 @@ class ListActivity : AppCompatActivity() {
                 binding.listRecyclerview.adapter = listAdapter
                 listRecyclerview.layoutManager = GridLayoutManager(applicationContext,GRID_VIEW)
                 DissmisDialog()
-                listenChangeRecyclerViewButton()
+                listenChangeRecyclerViewSwitch()
             }
         }
     }
 
-    private fun SwitchRecyclerViewLayout() {
+    private fun listenChangeRecyclerViewSwitch() {
         binding.apply {
-            if (rcyclerviewState == GRID_VIEW) {
-                listRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_LAYOUT)
-                changeRecyclerviewButton.text = getString(R.string.list_vertical_view_text)
-            } else {
-                listRecyclerview.layoutManager = LinearLayoutManager(applicationContext,LinearLayoutManager.VERTICAL,false)
-                changeRecyclerviewButton.text = getString(R.string.list_grid_view_text)
-            }
-        }
-    }
-
-    private fun listenChangeRecyclerViewButton() {
-        binding.apply {
-            changeRecyclerviewButton.setOnClickListener {
-                if (rcyclerviewState == GRID_VIEW) {
-                    rcyclerviewState = VERTICAL_VIEW
-                } else {
-                    rcyclerviewState = GRID_VIEW
+            changeRcyclerViewSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
+                if (isChecked){
+                    listRecyclerview.layoutManager = LinearLayoutManager(applicationContext,LinearLayoutManager.VERTICAL,false)
+                    recyclerViewStateText.text = applicationContext.getString(R.string.list_recyclerview_state_vertical)
+                }else {
+                    listRecyclerview.layoutManager = GridLayoutManager(applicationContext, GRID_LAYOUT)
+                    recyclerViewStateText.text = applicationContext.getString(R.string.list_recyclerview_state_grid)
                 }
-                SwitchRecyclerViewLayout()
             }
         }
     }
 
-    private fun listenSortButton() {
+    private fun ListenSortButton() {
         binding.apply {
             sortButton.setOnClickListener() {
                 AlertDialogAction()

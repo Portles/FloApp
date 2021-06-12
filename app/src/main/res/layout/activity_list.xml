@@ -41,16 +41,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productsTextView" />
 
-    <Button
-        android:id="@+id/changeRecyclerviewButton"
-        android:layout_width="@dimen/list_switch_width"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/list_button_mar_start"
-        android:text="@string/list_vertical_view_text"
-        app:layout_constraintBottom_toBottomOf="@+id/sortButton"
-        app:layout_constraintStart_toEndOf="@+id/sortButton"
-        app:layout_constraintTop_toTopOf="@+id/sortButton" />
-
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifImageView"
         android:layout_width="@dimen/list_gif_width"
@@ -60,5 +50,24 @@
         android:src="@drawable/flo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/changeRcyclerViewSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/list_rcryclerview_change_switch_mar_start"
+        app:layout_constraintBottom_toBottomOf="@+id/sortButton"
+        app:layout_constraintStart_toEndOf="@+id/sortButton"
+        app:layout_constraintTop_toTopOf="@+id/sortButton"
+        app:layout_constraintVertical_bias="0.444" />
+
+    <TextView
+        android:id="@+id/recyclerViewStateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_recyclerview_state_grid"
+        app:layout_constraintBottom_toTopOf="@+id/changeRcyclerViewSwitch"
+        app:layout_constraintEnd_toEndOf="@+id/changeRcyclerViewSwitch"
+        app:layout_constraintStart_toStartOf="@+id/changeRcyclerViewSwitch" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
