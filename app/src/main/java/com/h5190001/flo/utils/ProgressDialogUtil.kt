@@ -6,7 +6,7 @@ import com.h5190001.flo.R
 
 object ProgressDialogUtil {
     private lateinit var isdialog: AlertDialog
-    fun ShowDialog(activity: Activity) {
+    fun ShowProgressDialog(activity: Activity) {
         val inflate = activity.layoutInflater
         val dialogView = inflate.inflate(R.layout.progress_dialog ,null,)
 

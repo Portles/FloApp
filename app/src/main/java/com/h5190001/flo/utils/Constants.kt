@@ -9,10 +9,10 @@ object Constants {
     const val CATEGORY_SERVICES_PATH="/Portles/FloApp/main/datas/items.json"
     const val USER_SERVICES_PATH="/Portles/FloApp/main/datas/users.json"
 
-    const val VERTICAL_VIEW = 1
-    const val GRID_VIEW = 2
     const val GRID_LAYOUT = 2
 
     const val NETWORK_UTIL_NAMED = "DEPRECATION"
     const val NETWORK_UTIL_ACTION = "android.net.conn.CONNECTIVITY_CHANGE"
+
+    const val VIEWMODEL_ERROR = "Error"
 }

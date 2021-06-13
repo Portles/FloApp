@@ -7,6 +7,7 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.h5190001.flo.data.repository.UserRepository
 import com.h5190001.flo.data.models.UserResponse
+import com.h5190001.flo.utils.Constants.VIEWMODEL_ERROR
 import com.h5190001.flo.utils.enums.ResourceStatusEnum
 import kotlinx.coroutines.launch
 
@@ -39,7 +40,7 @@ class UserViewModel : ViewModel() {
                     }
 
                     ResourceStatusEnum.ERROR -> {
-                        Log.e("ERROR", "${it.throwable}")
+                        Log.e(VIEWMODEL_ERROR, "${it.throwable}")
                         error.postValue(it.throwable!!)
                         loading?.postValue(false)
                     }

@@ -22,7 +22,7 @@ import com.h5190001.flo.utils.GlideUtil.getImageFromUrl
 import com.h5190001.flo.utils.ObjectUtil.jsonStringToUserObject
 import com.h5190001.flo.utils.ObjectUtil.objectToString
 import com.h5190001.flo.utils.ProgressDialogUtil.DissmisDialog
-import com.h5190001.flo.utils.ProgressDialogUtil.ShowDialog
+import com.h5190001.flo.utils.ProgressDialogUtil.ShowProgressDialog
 
 class CategoryActivity : AppCompatActivity() {
 
@@ -40,7 +40,7 @@ class CategoryActivity : AppCompatActivity() {
 
     private fun init() {
         initBinding()
-        ShowDialog(this@CategoryActivity)
+        ShowProgressDialog(this@CategoryActivity)
         getUserData()
         initRecyclerViewData()
     }
