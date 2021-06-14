@@ -28,7 +28,7 @@ GIF VIDEO
 
 MVC PACKET MANAGEMENT
 --------
-<img width="330" height= "800"  src="https://raw.githubusercontent.com/Portles/FloApp/main/Sceens/Structure.png" alt="MVVM" />
+<img width="330" height= "800"  src="https://raw.githubusercontent.com/Portles/FloApp/main/Screens/Structure.png" alt="MVVM" />
 
 USED FRAMEWORKS
 --------
