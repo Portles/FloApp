@@ -23,7 +23,7 @@ ABOUT
 GIF VIDEO
 --------
 <p>
-  <img width="150" height= "350"  src="https://github.com/Portles/FloApp/blob/1.0.0/Screens/showGif.gif?raw=true" alt="Gif" />
+  <img width="150" height= "350"  src="https://github.com/Portles/FloApp/main/Screens/showGif.gif?raw=true" alt="Gif" />
 </p>
 
 MVC PACKET MANAGEMENT
