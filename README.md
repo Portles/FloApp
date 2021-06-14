@@ -28,18 +28,18 @@ GIF VIDEO
 
 MVC PACKET MANAGEMENT
 --------
-<img width="330" height= "800"  src="https://raw.githubusercontent.com/Portles/Android-final/main/GithubAssest/MVC.png" alt="SS5" />
+<img width="330" height= "800"  src="https://raw.githubusercontent.com/Portles/FloApp/main/Sceens/Structure.png" alt="MVVM" />
 
 USED FRAMEWORKS
 --------
 <li><a href="https://www.java.com/">Java</a></li>
+<li><a href="https://kotlinlang.org">Kotlin</a></li>
 <li><a href="https://github.com/bumptech/glide">Glide</a></li>
-<li><a href="https://github.com/ReactiveX/RxJava">RxJava</a></li>
-<li><a href="https://github.com/ReactiveX/RxAndroid">RxAndroid</a></li>
+<li><a href="https://github.com/google/gson">Gson</a></li>
 <li><a href="https://square.github.io/retrofit/">Retrofit</a></li>
 <li><a href="https://github.com/square/okhttp">OkHttp</a></li>
 <li><a href="https://material.io/develop/android/docs/getting-started/">Material Design</a></li>
-Assests from: Gameforge https://gameforge.com/
+Assests from: Flo https://www.flo.com.tr
 
 License
 --------
